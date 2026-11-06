@@ -234,10 +234,7 @@ p{margin:0}
 .avatar.photo::after{display:none}
 .avatar::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
 .founder h2{margin:14px 0 18px}
-.creds{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-.cred{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
-.cred b{display:block;font-size:.95rem;margin-bottom:4px}
-.cred span{font-size:.84rem;color:var(--muted)}
+.bio .lede{max-width:600px}.bio .lede+.lede{margin-top:16px}
 
 /* closing */
 .close{background:radial-gradient(800px 420px at 100% 0%,rgba(25,127,112,.5),transparent 60%),var(--ink)}
@@ -280,10 +277,6 @@ p{margin:0}
 .method li{margin:5px 0}
 .demo .method{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14);color:#fff}
 .demo .method ul{color:var(--on-dark)}
-.log{margin-top:26px;border-left:2px solid var(--line);padding-left:20px;display:grid;gap:14px}
-.log div{position:relative;font-size:.88rem;color:var(--muted)}
-.log div::before{content:"";position:absolute;left:-26px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--teal)}
-.log b{display:block;color:var(--ink);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
 .faq{display:grid;gap:10px;max-width:880px}
 .faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 24px}
 .faq summary{cursor:pointer;padding:20px 0;font-weight:650;list-style:none;display:flex;justify-content:space-between;gap:16px}
@@ -335,7 +328,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   .why-item:last-child{border-bottom:0}
   .kpis{grid-template-columns:1fr 1fr}.kpi.on{grid-column:1/-1}
   .pl{grid-template-columns:1fr;gap:6px}
-  .creds{grid-template-columns:1fr}.hero-meta{grid-template-columns:1fr 1fr;gap:18px}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:18px}
 }
 @media(max-width:480px){
   .grid4,.road,.res,.econ-grid{grid-template-columns:1fr}
@@ -581,19 +574,11 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div class="reveal">
       <div class="eyebrow">Founder</div>
       <h2>Cathy Liu</h2>
-      <p class="lede">I’m a data analyst from California, and I’ve lived in Hawaii. Over the last five years I’ve watched overconsumption climb around the world, and I’ve seen how little space we have left for what we throw away. I want to protect the world we have, so I’m building the data layer that keeps fabric offcuts out of landfill.</p>
-      <div class="creds">
-        <div class="cred"><b>Data analyst, 7 years</b><span>Hawaiian Airlines, Bank of Hawaii. Visual dashboards, forecasting, AWS and Databricks.</span></div>
-        <div class="cred"><b>MSc AI & Data Analytics</b><span>Northeastern University London</span></div>
-        <div class="cred"><b>Founded before</b><span>Started and ran my own social media company</span></div>
-        <div class="cred"><b>Why this problem</b><span>Offcuts are a forecasting problem with no data layer. That layer is what I build.</span></div>
+      <div class="bio">
+        <p class="lede">Cathy Liu is a data analyst from California with seven years of experience across aviation, banking and healthcare. At Bank of Hawaii she built treasury forecasts and automated the financial reporting that finance teams ran every month. At Hawaiian Airlines she ran workforce analytics and built the dashboards leadership used to make staffing and benefits decisions. Along the way she started her own creative marketing business, working with small businesses across Honolulu.</p>
+        <p class="lede">She recently completed an MSc in AI &amp; Data Analytics at Northeastern University London, where her dissertation tested how reliably ten language models give financial advice. Scrap Futures grew out of something she kept noticing: overconsumption has climbed over the last five years, and there is very little room left for what we throw away. Fabric offcuts can be forecast before a single garment is cut. She is building the data to do it.</p>
       </div>
-      <p style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-teal btn-sm" href="https://www.linkedin.com/in/cathyqliu/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn btn-ghost btn-sm" href="https://github.com/catliugit" target="_blank" rel="noopener">GitHub ↗</a></p>
-      <div class="log">
-        <div><b>3 Nov 2026</b>Chose Scrap Futures after testing seven venture ideas against a 10,000-run simulation</div>
-        <div><b>5 Nov 2026</b>Forecast prototype v0.1 built</div>
-        <div><b>6 Nov 2026</b>Site and investor deck published; discovery outreach to brands and recyclers begins</div>
-      </div>
+      <p style="margin-top:24px"><a class="btn btn-teal btn-sm" href="https://www.linkedin.com/in/cathyqliu/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
     </div>
   </div>
 </section>
