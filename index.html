@@ -153,6 +153,7 @@ p{margin:0}
 .lab{display:flex;justify-content:space-between;font-size:.8rem;font-weight:650;margin-bottom:8px}
 .lab output{color:var(--teal-d);font-variant-numeric:tabular-nums}
 .ctrl input[type=range]{width:100%;accent-color:var(--teal);margin:0 0 22px}
+.ctrl .row-sel{display:block}
 .ctrl select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #C7D3CE;background:#fff;margin-bottom:22px;color:var(--ink)}
 .ctrl .help{font-size:.72rem;color:#6E7D79;margin-top:16px;line-height:1.6}
 .main{padding:30px}
@@ -373,7 +374,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div>
       <span class="pill"><i></i> Pre-seed · London · Circular materials</span>
       <h1>Predict what’s left.<br><span class="serif">Plan what’s next.</span></h1>
-      <p class="lede">Scrap Futures forecasts textile offcuts from cutting-room data <em>before</em> the first cut, grades them to a common standard, and pre-matches them to recyclers who need reliable feedstock.</p>
+      <p class="lede">Scrap Futures turns cutting-room data into forward feedstock. We forecast textile offcuts <em>before</em> the first cut, grade them in the industry’s standard waste-data format, and let recyclers reserve supply ahead of time, so they can plan, and finance, their capacity.</p>
       <div class="cta-row">
         <a class="btn btn-lime" href="#demo">Try the forecast <span aria-hidden="true">→</span></a>
         <a class="btn btn-line" href="#contact">Apply for a founding pilot</a>
@@ -419,8 +420,8 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <!-- WHY NOW STRIP -->
 <section class="strip" aria-label="Why now">
   <div class="wrap strip-in">
-    <div class="stat"><b>2025</b><span>EU adopts textile EPR: producers pay for textile waste, with fees modulated by circularity</span><a href="https://www.carbonfact.com/blog/policy/textile-epr-overview" target="_blank" rel="noopener">Carbonfact EPR overview</a></div>
-    <div class="stat"><b>Jul 2026</b><span>ESPR bans large companies from destroying unsold apparel and footwear in the EU</span><a href="https://www.fibre2fashion.com/news/prime-content/apparel-news/eu-deadstock-ban-2026-fashion-s-unsold-inventory-reckoning-310812-newsdetails.htm" target="_blank" rel="noopener">Fibre2Fashion</a></div>
+    <div class="stat"><b>Q4 2027</b><span>EU textile ecodesign rules due for adoption: proposed recycled-content requirements plus disclosure of the <em>type of waste</em> the material came from</span><a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en" target="_blank" rel="noopener">European Commission</a></div>
+    <div class="stat"><b>~10%</b><span>of segregated factory waste in a Bangladesh pilot could go to textile-to-textile recycling. Recyclers “lack predictable, traceable waste flows”</span><a href="https://globalfashionagenda.org/news-article/transforming-post-industrial-textile-waste-in-bangladesh/" target="_blank" rel="noopener">Global Fashion Agenda</a></div>
     <div class="stat"><b>5–7%</b><span>of Bangladesh’s pre-consumer cotton waste is recycled in-country. The rest is exported or downcycled</span><a href="https://lightcastlepartners.com/insights/2026/04/advancing-circularity-bangladesh-rmg-sector-oporajita-phase-2/" target="_blank" rel="noopener">LightCastle, 2026</a></div>
   </div>
 </section>
@@ -430,7 +431,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="eyebrow">The problem</div><h2>Recyclers can’t scale on scraps they can’t see coming.</h2></div>
-      <p class="lede">Cutting-room waste is effectively decided when the cutting plan is made. Yet it’s only counted after the run, sorted inconsistently, and sold off as low-grade bales. Textile Exchange’s October 2026 analysis names brand purchase commitments and common feedstock grades as the fastest route to recycler finance (<a href="http://resource-recycling.com/recycling/2026/10/27/buyers-usable-feedstock-key-to-textile-recycling/" target="_blank" rel="noopener" style="text-decoration:underline">Resource Recycling</a>).</p>
+      <p class="lede">Cutting-room waste is effectively decided when the cutting plan is made. Yet it’s only weighed after the run, sorted inconsistently, and mostly exported or sold as low-grade bales. Recyclers say they can’t build plants without committed, predictable supply (<a href="https://www.kearney.com/documents/d/asset-library-291362522/from-circular-intent-to-operating-advantage-circular-fashion-index-2026-pdf" target="_blank" rel="noopener" style="text-decoration:underline">Kearney 2026</a>; <a href="http://resource-recycling.com/recycling/2026/10/27/buyers-usable-feedstock-key-to-textile-recycling/" target="_blank" rel="noopener" style="text-decoration:underline">Textile Exchange</a>).</p>
     </div>
     <div class="tabs reveal" role="tablist" aria-label="Choose your role">
       <button role="tab" id="tab-b" aria-selected="true" aria-controls="pn-b">For brands</button>
@@ -438,16 +439,16 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <button role="tab" id="tab-r" aria-selected="false" aria-controls="pn-r">For recyclers</button>
     </div>
     <div class="tabpanel reveal" role="tabpanel" id="pn-b" aria-labelledby="tab-b">
-      <article class="card"><span class="k">Today</span><h3>Liability without visibility</h3><p>EPR and reporting rules make you answerable for supply-chain waste you can neither forecast nor prove the destination of.</p></article>
-      <article class="card out"><span class="k">With Scrap Futures</span><h3>Know your offcuts before they exist</h3><ul><li>Forecast per run across your factory network</li><li>Lot-level evidence of where material went</li><li>Data ready for EPR and ESPR reporting</li></ul></article>
+      <article class="card"><span class="k">Today</span><h3>Liability without visibility</h3><p>Recycled-content targets and upcoming EU rules on waste-origin disclosure need evidence you can’t get from a waste bale.</p></article>
+      <article class="card out"><span class="k">With Scrap Futures</span><h3>Know your offcuts before they exist</h3><ul><li>Forecast per run across your factory network</li><li>Lot-level evidence of where material went</li><li>Feedstock for your recycled-content commitments</li></ul></article>
     </div>
     <div class="tabpanel" role="tabpanel" id="pn-f" aria-labelledby="tab-f" hidden>
-      <article class="card"><span class="k">Today</span><h3>Offcuts are a disposal cost</h3><p>Fibre, colour and run data exist in the cutting room, but aren’t captured in a form a buyer can contract against.</p></article>
-      <article class="card out"><span class="k">With Scrap Futures</span><h3>Graded, pre-sold lots</h3><ul><li>Share data you already have: marker files and fabric specs</li><li>No storage, no new resale operation</li><li>Material ships straight to a matched recycler</li></ul></article>
+      <article class="card"><span class="k">Today</span><h3>Offcuts are a disposal cost</h3><p>Fabric is over half of garment cost, yet the gap between the marker and what’s actually used is rarely measured, and offcuts sell for cents a kilo.</p></article>
+      <article class="card out"><span class="k">With Scrap Futures</span><h3>See where fabric goes, then sell what’s left</h3><ul><li>Loss breakdown per run: ends, remnants, spreading, defects</li><li>Graded lots reserved by recyclers before cutting</li><li>Free for factories; no storage or new operations</li></ul></article>
     </div>
     <div class="tabpanel" role="tabpanel" id="pn-r" aria-labelledby="tab-r" hidden>
       <article class="card"><span class="k">Today</span><h3>No forward supply, no finance</h3><p>Fibre-to-fibre plants need contracted, spec-matched feedstock to raise capital and fill capacity. They get unpredictable lots after the fact.</p></article>
-      <article class="card out"><span class="k">With Scrap Futures</span><h3>See supply before the cut</h3><ul><li>Forward visibility of volumes by fibre and colour</li><li>Lots graded to one shared standard</li><li>A basis for forward offtake you can take to lenders</li></ul></article>
+      <article class="card out"><span class="k">With Scrap Futures</span><h3>See supply before the cut</h3><ul><li>Forward visibility of volumes by fibre and colour</li><li>Lots described in Textile Exchange’s waste-data format</li><li>A basis for forward offtake you can take to lenders</li></ul></article>
     </div>
   </div>
 </section>
@@ -462,8 +463,8 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div class="grid4">
       <article class="step reveal"><div class="n">01</div><h3>Read the run</h3><p>Ingest production orders, fabric specs and marker (cutting-layout) files from the factory.</p></article>
       <article class="step reveal"><div class="n">02</div><h3>Forecast the offcut</h3><p>Predict volume and composition per run, then calibrate against actual weighed output.</p></article>
-      <article class="step reveal"><div class="n">03</div><h3>Grade to a standard</h3><p>Classify lots by fibre, colour and quality against recycler acceptance specs.</p></article>
-      <article class="step reveal"><div class="n">04</div><h3>Match, ship, verify</h3><p>Pre-match lots to recyclers before cutting, then record weights and shipment evidence for brand reporting.</p></article>
+      <article class="step reveal"><div class="n">03</div><h3>Grade the lots</h3><p>Describe lots by fibre, colour, form and source, aligned to Textile Exchange’s Recycled Material Data Form.</p></article>
+      <article class="step reveal"><div class="n">04</div><h3>Reserve, ship, verify</h3><p>Recyclers reserve forecast lots before cutting; weights and shipment evidence close the loop for brand reporting.</p></article>
     </div>
     <div class="datanote reveal"><span class="ic">🔒</span><p><b>Your production data stays yours.</b> Pilots run under NDA. We use only what the forecast needs, never share one brand’s or factory’s data with another, and delete pilot data on request.</p></div>
   </div>
@@ -473,40 +474,46 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="sec demo dark" id="demo">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow">Interactive prototype</div><h2>Try the forecast.</h2></div>
-      <p class="lede">A simplified version of step 02. Change the run and watch the projected feedstock update. The production model will learn from real marker files and weighed output.</p>
+      <div><div class="eyebrow">Live ML model</div><h2>Try the forecast.</h2></div>
+      <p class="lede">This runs the actual gradient-boosted model in your browser: P10/P50/P90 offcut forecasts from order data alone, before any cutting plan exists. Trained on 8,000 simulated production runs; <a href="https://github.com/catliugit/offcut-forecast" target="_blank" rel="noopener" style="text-decoration:underline">code and method on GitHub</a>.</p>
     </div>
     <div class="shell reveal">
       <div class="ctrl">
         <span class="kick">Scenario inputs</span>
         <h3>Production run</h3>
+        <div class="row-sel">
+          <label class="lab" for="garment"><span>Garment</span></label>
+          <select id="garment"><option value="tee">T-shirt (jersey)</option><option value="hoodie">Hoodie (fleece)</option><option value="shirt">Shirt (woven)</option><option value="jeans">Jeans (denim)</option><option value="dress">Dress (woven)</option></select>
+          <label class="lab" for="sizemix"><span>Size range</span></label>
+          <select id="sizemix"><option value="narrow">Core sizes (S–XL)</option><option value="standard" selected>Standard (XS–XXL)</option><option value="extended">Extended / inclusive</option></select>
+          <label class="lab" for="material"><span>Fibre</span></label>
+          <select id="material"><option value="cotton">100% cotton</option><option value="polyester">100% polyester</option><option value="cotton_poly">Cotton/polyester blend</option><option value="cotton_elastane">Cotton with elastane</option></select>
+          <label class="lab" for="colour"><span>Colour</span></label>
+          <select id="colour"><option value="white">White / undyed</option><option value="light">Light</option><option value="dark">Dark</option><option value="mixed">Mixed</option></select>
+        </div>
         <label class="lab" for="meters"><span>Fabric length</span><output id="metersVal">18,000 m</output></label>
         <input id="meters" type="range" min="2000" max="40000" value="18000" step="500">
-        <label class="lab" for="util"><span>Cutting utilisation</span><output id="utilVal">84%</output></label>
-        <input id="util" type="range" min="70" max="95" value="84" step="1">
+        <label class="lab" for="width"><span>Fabric width</span><output id="widthVal">1.80 m</output></label>
+        <input id="width" type="range" min="1.2" max="2.2" value="1.8" step="0.05">
         <label class="lab" for="gsm"><span>Fabric weight</span><output id="gsmVal">180 g/m²</output></label>
-        <input id="gsm" type="range" min="100" max="400" value="180" step="10">
-        <label class="lab" for="width"><span>Fabric width</span><output id="widthVal">1.6 m</output></label>
-        <input id="width" type="range" min="1.2" max="2.2" value="1.6" step="0.1">
-        <label class="lab" for="material"><span>Fibre composition</span></label>
-        <select id="material"><option>100% cotton</option><option>100% polyester</option><option>80/20 cotton/polyester</option><option>Unknown blend</option></select>
+        <input id="gsm" type="range" min="80" max="450" value="180" step="5">
         <button class="btn btn-ghost btn-sm" id="reset" type="button">↺ Reset</button>
-        <p class="help">Prototype arithmetic: mass = length × width × GSM; offcuts = mass × (1 − utilisation).</p>
+        <p class="help">Changing the garment loads typical width and weight. Values outside the training ranges are held at the nearest edge.</p>
       </div>
       <div class="main">
-        <div class="main-top"><div><span class="kick">Projected feedstock · SF-DEMO</span><h3>Forecast summary</h3></div><span class="chip">● Live scenario</span></div>
+        <div class="main-top"><div><span class="kick">Projected feedstock · SF-DEMO</span><h3>Forecast summary</h3></div><span class="chip">● ML model, in-browser</span></div>
         <div class="kpis">
-          <div class="kpi on"><span>Projected offcuts</span><strong id="scrapKg">829<small> kg</small></strong></div>
-          <div class="kpi"><span>Input fabric mass</span><strong id="massKg">5,184<small> kg</small></strong></div>
-          <div class="kpi"><span>Planning range (±20%)</span><strong id="rangeKg">663–995<small> kg</small></strong></div>
+          <div class="kpi on"><span>Projected offcuts (P50)</span><strong id="scrapKg">–<small> kg</small></strong></div>
+          <div class="kpi"><span>Planning range (P10–P90)</span><strong id="rangeKg">–<small> kg</small></strong></div>
+          <div class="kpi"><span>15% rule of thumb</span><strong id="ruleKg">–<small> kg</small></strong><small id="ruleDelta" style="display:block;margin-top:4px"></small></div>
         </div>
         <div class="flow">
-          <div class="flow-meta"><b>Material flow</b><span id="barInfo">84% cut panels / 16% offcuts</span></div>
-          <div class="bar"><span class="a" id="goodBar" style="width:84%"></span><span class="b" id="scrapBar" style="width:16%"></span></div>
+          <div class="flow-meta"><b>Material flow · <span id="massKg">–</span> kg fabric in</b><span id="barInfo"></span></div>
+          <div class="bar"><span class="a" id="goodBar" style="width:80%"></span><span class="b" id="scrapBar" style="width:20%"></span></div>
           <div class="legend"><span><i style="background:#197F70"></i>Cut panels</span><span><i style="background:#D9F17E"></i>Offcuts → feedstock</span></div>
         </div>
         <div class="res">
-          <div><small>PRELIMINARY GRADE</small><strong id="grade">Single-fibre cotton stream</strong><p id="gradeDetails">High value for mechanical and chemical recyclers once colour and contamination are confirmed.</p></div>
+          <div><small>GRADE · <span id="gradeCode">C1-W</span></small><strong id="grade">Single-fibre cotton stream</strong><p id="gradeDetails">High value for mechanical and chemical recyclers once colour and contamination are confirmed.</p></div>
           <div><small>MATCHING ROUTE</small><strong id="route">Fibre-to-fibre recycler</strong><p id="routeDetails">Candidate for a forward offtake agreement ahead of the cutting run.</p></div>
         </div>
         <div class="acts">
@@ -516,7 +523,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
         <p class="note">Runs entirely in your browser; nothing is sent anywhere.</p>
       </div>
     </div>
-    <details class="method reveal"><summary>Method and limits of this prototype</summary><ul><li>Mass = fabric length × width × GSM; offcuts = mass × (1 − cutting utilisation).</li><li>The ±20% band is a planning assumption, not a measured error. The pilot goal is a forecast within ±15% of weighed actuals.</li><li>Grades and routes are rule-based placeholders. The real grade standard will be co-defined with recyclers.</li><li>The production model will learn from marker files and weighed output across runs.</li></ul></details>
+    <details class="method reveal"><summary>How the model works, and its limits</summary><ul><li><b>Data:</b> 8,000 production runs from a simulator that nests graded pattern pieces into cutting plans, then adds the losses cutting plans miss: selvedge trim, ply-end allowance, roll-end remnants, spreading loss and defects.</li><li><b>Model:</b> gradient-boosted quantile regression (P10/P50/P90) on order data only, exported to JSON and run here in plain JavaScript.</li><li><b>Held-out accuracy:</b> 8.8% mean error on offcut kg (82% of runs within ±15%), vs 23.3% for the cutting plan alone and 20.3% for a flat 15% rule. The P10–P90 range covers 76% of outcomes. Simulated waste averages 19% of fabric, inside the 10–20% industry range.</li><li><b>Limits:</b> trained on simulated, not factory, data. The first pilot goal is ±15% on real weighed output. Grades follow a v0 standard to be co-defined with recyclers.</li></ul></details>
   </div>
 </section>
 
@@ -525,22 +532,23 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="eyebrow">How we compare</div><h2>Everyone else starts after the cut.</h2></div>
-      <p class="lede">Existing approaches track or trade waste once it exists. Scrap Futures moves the decision upstream, to the cutting plan.</p>
+      <p class="lede">Cutting software optimises the plan; traceability platforms record waste after it exists. Nobody turns the plan into a forward supply contract for recyclers.</p>
     </div>
     <div class="tbl-wrap reveal">
       <table class="tbl">
         <thead><tr><th>Approach</th><th>Forecast pre-cut</th><th>Common grade standard</th><th>Forward offtake</th><th>Brand-ready evidence</th></tr></thead>
         <tbody>
           <tr><td>Waste-mapping & traceability platforms<br><small style="font-weight:400;color:var(--muted)">e.g. Reverse Resources</small></td><td class="no">After generation</td><td class="yes">Partial</td><td class="no">Limited</td><td class="yes">Yes</td></tr>
-          <tr><td>Local waste brokers & balers</td><td class="no">No</td><td class="no">Ad hoc</td><td class="no">Spot sales</td><td class="no">No</td></tr>
+          <tr><td>Cutting-room software<br><small style="font-weight:400;color:var(--muted)">e.g. Lectra, Gerber, ThreadSol</small></td><td class="yes">Fabric need &amp; marker waste</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Waste brokers &amp; marketplaces<br><small style="font-weight:400;color:var(--muted)">local jhut traders; Eslando</small></td><td class="no">No</td><td class="no">Ad hoc</td><td class="no">Spot sales</td><td class="no">Limited</td></tr>
           <tr><td>Recyclers’ own sourcing teams</td><td class="no">No</td><td class="no">Own spec only</td><td class="yes">Bilateral</td><td class="no">Limited</td></tr>
-          <tr class="us"><td>Scrap Futures</td><td class="yes">Yes, from marker data</td><td class="yes">Yes, cross-recycler</td><td class="yes">Pre-matched</td><td class="yes">Lot-level</td></tr>
+          <tr class="us"><td>Scrap Futures</td><td class="yes">Weighed offcut, by grade</td><td class="yes">RMDF-aligned</td><td class="yes">Reserved pre-cut</td><td class="yes">Lot-level</td></tr>
         </tbody>
       </table>
     </div>
     <div class="grid3 moat">
-      <article class="card reveal"><span class="k">Moat 01</span><h3>Calibration data</h3><p>Every forecast versus its actual weighed output improves the model. That dataset doesn’t exist anywhere today.</p></article>
-      <article class="card reveal"><span class="k">Moat 02</span><h3>The grade standard</h3><p>A shared vocabulary for recyclers and factories becomes the default contract language.</p></article>
+      <article class="card reveal"><span class="k">Moat 01</span><h3>Calibration data</h3><p>Every forecast versus its actual weighed output improves the model. That dataset isn’t publicly available anywhere today.</p></article>
+      <article class="card reveal"><span class="k">Moat 02</span><h3>Forward contracts</h3><p>Recyclers reserve supply against our forecasts. Contract history and delivery performance are hard to copy.</p></article>
       <article class="card reveal"><span class="k">Moat 03</span><h3>Two-sided network</h3><p>Forward agreements with recyclers make each new brand programme instantly more valuable.</p></article>
     </div>
   </div>
@@ -551,7 +559,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="eyebrow">Impact</div><h2>Impact is built into the revenue.</h2></div>
-      <p class="lede">Brokerage is earned only on lots verified as delivered to a recycler, so the business grows only when material is actually recovered.</p>
+      <p class="lede">The recycler fee is earned per tonne verified as delivered, so the business grows only when material is actually recovered.</p>
     </div>
     <div class="grid4">
       <article class="step reveal"><div class="n">01</div><h3>Forecast</h3><p>Offcuts are known before the cut, by fibre and colour.</p></article>
@@ -577,6 +585,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
         <div class="cred"><b>Production data stack</b><span>AWS, Databricks, Spark pipelines</span></div>
         <div class="cred"><b>Why this problem</b><span>Offcuts are a forecasting problem with no data layer. That layer is what I build.</span></div>
       </div>
+      <p style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-teal btn-sm" href="https://www.linkedin.com/in/cathyqliu/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn btn-ghost btn-sm" href="https://github.com/catliugit" target="_blank" rel="noopener">GitHub ↗</a></p>
       <div class="log">
         <div><b>3 Nov 2026</b>Chose Scrap Futures after testing seven venture ideas against a 10,000-run simulation</div>
         <div><b>5 Nov 2026</b>Forecast prototype v0.1 built</div>
@@ -590,36 +599,36 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="sec" id="investors">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow">For investors · Business model</div><h2>Brands pay for visibility. Every lot pays a match fee.</h2></div>
-      <p class="lede">SaaS revenue from the brand’s factory programme, plus a brokerage fee on verified, completed material transactions.</p>
+      <div><div class="eyebrow">For investors · Business model</div><h2>Brands license the programme. Recyclers pay per tonne.</h2></div>
+      <p class="lede">Priced against comparable brand traceability and product-passport tools (€7k–€100k a year), and charged to the party with the budget and the pain. Free for factories.</p>
     </div>
     <div class="model">
       <div class="price reveal">
-        <div class="pl"><div><small>Programme setup</small><b>£1k–£4k</b></div><p>One-off: map a brand’s factory network, connect data, set grade specs.</p></div>
-        <div class="pl"><div><small>Platform</small><b>£300–£900</b></div><p>Per month, per brand programme: forecasts, grading and reporting.</p></div>
-        <div class="pl"><div><small>Brokerage</small><b>5–12%</b></div><p>Of transaction value on each verified lot shipped to a recycler.</p></div>
+        <div class="pl"><div><small>Paid pilot</small><b>£12k–£25k</b></div><p>One season, 2–3 factories: forecast vs weighed actuals, graded lots, a matched offtake.</p></div>
+        <div class="pl"><div><small>Brand programme</small><b>£15k–£40k</b></div><p>Per year, tiered by factories and tonnes covered: forecasts, grading, offtake evidence.</p></div>
+        <div class="pl"><div><small>Recycler reservation</small><b>£15–£40/t</b></div><p>Per tonne of forecast feedstock reserved and delivered. Recyclers are the side asking for predictable supply.</p></div>
         <p class="fine">Pricing ranges are working hypotheses to validate through paid pilots.</p>
       </div>
       <div class="econ reveal">
-        <div class="eyebrow">Capital efficiency (model)</div>
-        <h3>Default-alive on ~10 brand programmes</h3>
-        <p>Asset-light economics mean a small base of brands sustains the company, so pre-seed capital goes into growth and the marketplace, not survival.</p>
+        <div class="eyebrow">Market sizing (bottom-up)</div>
+        <h3>A focused, compliance-driven niche</h3>
+        <p>UK and EU brands above £10m turnover, priced at the brand-programme tier. Built from ONS and Fashion Revolution data, not top-down reports.</p>
         <div class="econ-grid">
-          <div><b>74%</b><span>of 10,000 simulated paths reach founder break-even by month 24</span></div>
-          <div><b>39%</b><span>under a stress test of slower sales and lower prices</span></div>
-          <div><b>~1</b><span>new brand programme needed every 2.5 months</span></div>
-          <div><b>£0</b><span>inventory or warehouse capex: material ships factory to recycler</span></div>
+          <div><b>£31m</b><span>TAM per year: ~3,100 UK+EU apparel brands over £10m turnover</span></div>
+          <div><b>£7m</b><span>SAM: ~260 large brands with public materials targets</span></div>
+          <div><b>~£0.5m</b><span>ARR at 10 brand programmes plus recycler fees (year-3 goal)</span></div>
+          <div><b>£0</b><span>inventory capex: material ships factory to recycler</span></div>
         </div>
-        <p class="fine">Internal model, November 2026. The key assumption to test is brand willingness to pay £300–£900/month.</p>
+        <p class="fine">Pricing is a hypothesis benchmarked against public tool pricing, to be tested in paid pilots.</p>
       </div>
     </div>
     <div class="grid4" style="margin-top:16px">
-      <article class="step reveal"><div class="n">01</div><h3>Brand programmes</h3><p>SaaS: forecasts, grading and EPR-ready evidence across a brand’s factory network.</p></article>
+      <article class="step reveal"><div class="n">01</div><h3>Brand programmes</h3><p>Licensed programme: forecasts, grading and offtake evidence across a brand’s factory network.</p></article>
       <article class="step reveal"><div class="n">02</div><h3>Factory network</h3><p>Each factory onboarded for one brand can serve every brand it produces for.</p></article>
-      <article class="step reveal"><div class="n">03</div><h3>Recycler marketplace</h3><p>Brokerage on forward-matched, verified lots as recycler capacity comes online.</p></article>
-      <article class="step reveal"><div class="n">04</div><h3>Feedstock data layer</h3><p>Verified lot data for recycled-content claims, EPR fee modulation and recycler financing.</p></article>
+      <article class="step reveal"><div class="n">03</div><h3>Forward offtake</h3><p>Standard forward contracts for graded post-industrial feedstock, as recycler capacity comes online.</p></article>
+      <article class="step reveal"><div class="n">04</div><h3>Feedstock data layer</h3><p>Verified waste-origin data for recycled-content claims under EU ecodesign rules, and for recycler financing.</p></article>
     </div>
-    <details class="method reveal"><summary>How the model works (assumptions)</summary><ul><li>10,000 Monte Carlo runs × 24 months, fixed seed, with triangular (min / most likely / max) distributions for prices, sales pace and hours per client.</li><li>Founder churn is included: a monthly chance of quitting that falls as fit with the founder rises.</li><li>Compared against six alternative venture ideas using the same engine; Scrap Futures was the only one high on both founder fit and payoff.</li><li>The stress test lowers prices and slows sales. The biggest untested input is brand willingness to pay.</li></ul></details>
+    <details class="method reveal"><summary>How the sizing works (assumptions)</summary><ul><li>UK: 410 apparel enterprises over £10m turnover, 60 over £100m (ONS IDBR, 2023). EU scaled by population (×6.5).</li><li>TAM: 450 large brands × £27.5k + 2,625 mid-size × £7.2k “lite” tier ≈ £31m a year.</li><li>SAM: large brands with a time-bound materials target (58%, Fashion Revolution) ≈ 260 × £27.5k ≈ £7.2m.</li><li>Year-3 goal: 10 programmes (£275k) + 10,000 t reserved at £25/t (£250k). For reference, the main incumbent serves 18 brands after about 12 years.</li></ul></details>
   </div>
 </section>
 
@@ -631,9 +640,9 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <p class="lede">Each stage has a pass/fail gate, so capital is only spent once the previous risk is retired.</p>
     </div>
     <div class="road">
-      <div class="ph now reveal"><span class="when">Next 30 days</span><h3>Discovery</h3><ul><li>15 brand sourcing / sustainability leads</li><li>5 mechanical & chemical recyclers</li><li>Forecast one real cutting layout</li></ul><div class="gate"><b>Gate:</b> 6 brand calls, 2 recyclers name grades and volumes</div></div>
+      <div class="ph now reveal"><span class="when">Next 30 days</span><h3>Discovery</h3><ul><li>15 brand sourcing / sustainability leads</li><li>5 mechanical &amp; chemical recyclers: “would a 6-month forward forecast change your purchasing or financing?”</li><li>Forecast one real cutting layout</li></ul><div class="gate"><b>Gate:</b> 6 brand calls, 2 recyclers name grades and volumes</div></div>
       <div class="ph reveal"><span class="when">Months 2–4</span><h3>Paid pilot</h3><ul><li>1 brand, 1–2 factories</li><li>Forecast vs. weighed actuals</li><li>First recycler letter of intent</li></ul><div class="gate"><b>Gate:</b> forecast within ±15%, 1 LOI signed</div></div>
-      <div class="ph reveal"><span class="when">Months 5–9</span><h3>First matches</h3><ul><li>Grade standard v1</li><li>First verified lots shipped</li><li>Brand reporting pack</li></ul><div class="gate"><b>Gate:</b> 3 paying brand programmes</div></div>
+      <div class="ph reveal"><span class="when">Months 5–9</span><h3>First matches</h3><ul><li>RMDF-aligned grade spec</li><li>First verified lots shipped</li><li>Brand reporting pack</li></ul><div class="gate"><b>Gate:</b> 3 paying brand programmes</div></div>
       <div class="ph reveal"><span class="when">Months 10–24</span><h3>Platform</h3><ul><li>Marker-file ingestion at scale</li><li>Self-serve recycler matching</li><li>EPR-ready data exports</li></ul><div class="gate"><b>Gate:</b> ~10 brands, founder break-even</div></div>
     </div>
   </div>
@@ -644,11 +653,12 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="sec-head reveal"><div><div class="eyebrow">FAQ</div><h2>Common questions.</h2></div><p class="lede">Something not covered? Use the form below.</p></div>
     <div class="faq reveal">
+      <details><summary>Doesn’t cutting software already know the waste?</summary><p>It knows the planned waste inside one marker. It doesn’t predict the weighed offcut after ends, remnants, spreading and defects (about a quarter more in our model), split by recyclable grade, early enough to sign a forward contract. We aim to integrate with cutting software, not replace it.</p></details>
       <details><summary>How is this different from waste-traceability platforms?</summary><p>Traceability platforms such as Reverse Resources map and trace factory waste after it’s generated. Scrap Futures starts earlier: it forecasts offcuts from the cutting plan before the cut, so lots can be graded and matched to a recycler in advance.</p></details>
       <details><summary>Do you buy, store or handle the material?</summary><p>No. Material ships directly from the factory to the recycler. We provide the forecast, the grading, the match and the evidence trail.</p></details>
       <details><summary>What data do you need from a factory?</summary><p>Production orders, fabric specifications (composition, width, GSM) and marker or cutting-layout files where available. Weighed offcut output after each run lets us calibrate the forecast.</p></details>
-      <details><summary>Who defines the grades?</summary><p>Grades are co-defined with recyclers against their acceptance specs, so one lot description works across several buyers. Founding pilot partners help shape version 1.</p></details>
-      <details><summary>What does a founding pilot involve?</summary><p>One brand, one or two factories, and a few production runs. We forecast each run, compare it with weighed actuals, and work towards a first recycler match. Scope and any fee are agreed up front.</p></details>
+      <details><summary>Who defines the grades?</summary><p>We build on Textile Exchange’s Recycled Material Data Form (fibre composition, colour, origin and source) and map it to each recycler’s acceptance specs, rather than inventing a parallel standard.</p></details>
+      <details><summary>What does a founding pilot involve?</summary><p>One brand, one or two factories, and a few production runs. We forecast each run, compare it with weighed actuals, and work towards a first recycler match. A founding pilot is a fixed-fee engagement agreed up front.</p></details>
       <details><summary>Why London?</summary><p>London sits close to UK and EU brands facing EPR and ESPR, and to Europe’s recycling and climate-investment ecosystem. The factories are in sourcing hubs such as Bangladesh, Pakistan, Portugal and Turkey.</p></details>
     </div>
   </div>
@@ -660,7 +670,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div class="reveal">
       <div class="eyebrow">Let’s talk</div>
       <h2>Turn the world’s cutting-room floor into <span class="serif">contracted feedstock.</span></h2>
-      <p class="lede" style="margin-top:22px">Three founding pilot slots for Q1 2027. Founding partners help shape the grade standard. Also speaking with investors and venture builders backing climate infrastructure.</p>
+      <p class="lede" style="margin-top:22px">Three founding pilot slots for Q1 2027, starting with one corridor: 100% cotton knit offcuts from South Asia to mechanical recyclers. Also speaking with investors and venture builders backing climate infrastructure.</p>
       <p style="margin-top:18px"><a class="btn btn-line btn-sm" id="mailBtn" href="#contact">Or email the founder directly</a> <button class="btn btn-line btn-sm" id="briefBtn" type="button">Copy a pilot intro note</button></p>
     </div>
     <div class="ask reveal">
@@ -693,6 +703,8 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="forecast.js"></script>
+<script src="model.js"></script>
 <script>
 (()=>{'use strict';
 /* ---- CONFIG: set your contact email here before deploying ---- */
@@ -700,27 +712,38 @@ const CONTACT_EMAIL = 'cathyqliu1@gmail.com';
 
 const $=id=>document.getElementById(id);
 const fmt=n=>Math.round(n).toLocaleString('en-GB');
-const fields=['meters','util','gsm','width','material'];
-const defaults={meters:'18000',util:'84',gsm:'180',width:'1.6',material:'100% cotton'};
+const fields=['garment','sizemix','material','colour','meters','width','gsm'];
+const defaults={garment:'tee',sizemix:'standard',material:'cotton',colour:'white',meters:'18000',width:'1.8',gsm:'180'};
+const typical={tee:[1.8,180],hoodie:[1.8,320],shirt:[1.5,120],jeans:[1.55,380],dress:[1.5,140]};
+const fibreLabel={cotton:'100% cotton',polyester:'100% polyester',cotton_poly:'cotton/polyester blend',cotton_elastane:'cotton with elastane'};
+const colourCode={white:'W',light:'L',dark:'D',mixed:'M'};
+const fibreCode={cotton:'C',polyester:'P',cotton_poly:'B',cotton_elastane:'E'};
 const grades={
- '100% cotton':['Single-fibre cotton stream','High value for mechanical and chemical recyclers once colour and contamination are confirmed.','Fibre-to-fibre recycler','Candidate for a forward offtake agreement ahead of the cutting run.'],
- '100% polyester':['Single-fibre polyester stream','Suited to chemical (depolymerisation) recycling; trims and coatings need checking.','Chemical polyester recycler','Match on purity spec; consolidate across runs to hit minimum lot size.'],
- '80/20 cotton/polyester':['Blended fibre stream','Blend tolerance varies by recycler; may need separation technology.','Blend-capable recycler','Fewer buyers: route to recyclers with separation capacity.'],
- 'Unknown blend':['Unverified fibre stream','Composition must be tested (e.g. NIR scan) before grading.','Test, then route','Flag for testing at source before any offtake is offered.']};
+ cotton:['Single-fibre cotton stream','High value for mechanical and chemical (cellulosic) recyclers once contamination is checked.','Fibre-to-fibre recycler','Candidate for a forward offtake agreement ahead of the cutting run.'],
+ polyester:['Single-fibre polyester stream','Suited to chemical (depolymerisation) recycling; trims and coatings need checking.','Chemical polyester recycler','Match on purity spec; consolidate across runs to hit minimum lot size.'],
+ cotton_poly:['Blended fibre stream','Blend tolerance varies by recycler; may need separation technology.','Blend-capable recycler','Fewer buyers: route to recyclers with separation capacity.'],
+ cotton_elastane:['Elastane-containing stream','Elastane limits mechanical recycling; confirm % before offering.','Specialist or sort-and-bale','Route to recyclers that accept elastane, or sort for reuse.']};
 let summary='';
 let toastT;
 function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2600)}
 function recalc(){
-  const m=+$('meters').value,u=+$('util').value,g=+$('gsm').value,w=+$('width').value,mat=$('material').value;
-  const mass=m*w*g/1000,scrap=mass*(100-u)/100,lo=scrap*.8,hi=scrap*1.2,gr=grades[mat];
-  $('metersVal').textContent=fmt(m)+' m';$('utilVal').textContent=u+'%';$('gsmVal').textContent=g+' g/m²';$('widthVal').textContent=w.toFixed(1)+' m';
-  $('scrapKg').innerHTML=fmt(scrap)+'<small> kg</small>';$('massKg').innerHTML=fmt(mass)+'<small> kg</small>';$('rangeKg').innerHTML=fmt(lo)+'–'+fmt(hi)+'<small> kg</small>';
-  $('goodBar').style.width=u+'%';$('scrapBar').style.width=(100-u)+'%';$('barInfo').textContent=u+'% cut panels / '+(100-u)+'% offcuts';
-  $('grade').textContent=gr[0];$('gradeDetails').textContent=gr[1];$('route').textContent=gr[2];$('routeDetails').textContent=gr[3];
-  summary=`SCRAP FUTURES: prototype forecast\nFabric: ${fmt(m)} m × ${w.toFixed(1)} m @ ${g} g/m² (${mat})\nInput mass: ${fmt(mass)} kg\nCutting utilisation: ${u}%\nProjected offcuts: ${fmt(scrap)} kg (planning range ${fmt(lo)}–${fmt(hi)} kg)\nGrade: ${gr[0]}\nRoute: ${gr[2]}\n(Prototype estimate, not a validated forecast or recycler offer.)`;
+  const o={garment:$('garment').value,size_mix:$('sizemix').value,fibre:$('material').value,
+    fabric_metres:+$('meters').value,fabric_width_m:+$('width').value,gsm:+$('gsm').value};
+  const col=$('colour').value,gr=grades[o.fibre];
+  $('metersVal').textContent=fmt(o.fabric_metres)+' m';$('widthVal').textContent=o.fabric_width_m.toFixed(2)+' m';$('gsmVal').textContent=o.gsm+' g/m²';
+  const r=window.OffcutForecast.predict(window.OFFCUT_MODEL,o);
+  const p50=r.kg.p50,rule=r.input_kg*0.15,pct=r.ratio.p50*100,d=p50-rule;
+  $('scrapKg').innerHTML=fmt(p50)+'<small> kg</small>';$('rangeKg').innerHTML=fmt(r.kg.p10)+'–'+fmt(r.kg.p90)+'<small> kg</small>';
+  $('ruleKg').innerHTML=fmt(rule)+'<small> kg</small>';$('ruleDelta').textContent=(d>=0?'Model: +':'Model: −')+fmt(Math.abs(d))+' kg vs rule';
+  $('massKg').textContent=fmt(r.input_kg);
+  $('goodBar').style.width=(100-pct).toFixed(1)+'%';$('scrapBar').style.width=pct.toFixed(1)+'%';$('barInfo').textContent=(100-pct).toFixed(1)+'% cut panels / '+pct.toFixed(1)+'% offcuts';
+  const code=fibreCode[o.fibre]+'1-'+colourCode[col];
+  $('gradeCode').textContent=code;$('grade').textContent=gr[0];$('gradeDetails').textContent=gr[1];$('route').textContent=gr[2];$('routeDetails').textContent=gr[3];
+  summary=`SCRAP FUTURES: ML offcut forecast (prototype, simulated training data)\nRun: ${o.garment}, ${o.size_mix} sizes, ${fibreLabel[o.fibre]}, ${col}\nFabric: ${fmt(o.fabric_metres)} m × ${o.fabric_width_m.toFixed(2)} m @ ${o.gsm} g/m² = ${fmt(r.input_kg)} kg\nForecast offcuts: P50 ${fmt(p50)} kg (P10–P90 ${fmt(r.kg.p10)}–${fmt(r.kg.p90)} kg), ${pct.toFixed(1)}% of fabric\n15% rule of thumb: ${fmt(rule)} kg\nGrade: ${code} (${gr[0]})\nRoute: ${gr[2]}`;
 }
 async function copy(s){try{await navigator.clipboard.writeText(s);toast('Copied to clipboard')}catch(_){const t=document.createElement('textarea');t.value=s;document.body.appendChild(t);t.select();try{document.execCommand('copy');toast('Copied to clipboard')}catch(e){toast('Copy not supported here')}t.remove()}}
 fields.forEach(id=>$(id).addEventListener('input',recalc));
+$('garment').addEventListener('change',()=>{const t=typical[$('garment').value];$('width').value=t[0];$('gsm').value=t[1];recalc()});
 $('reset').addEventListener('click',()=>{fields.forEach(id=>$(id).value=defaults[id]);recalc();toast('Scenario reset')});
 $('copyBtn').addEventListener('click',()=>copy(summary));
 const intro='Hi, I’m building Scrap Futures, which forecasts textile offcuts from cutting-room data before a run starts, grades them, and pre-matches them to recyclers. I’d love to learn how you currently measure, sort and place pre-consumer material, and whether an early forecast would be useful. Open to a 20-minute call?';
@@ -730,7 +753,7 @@ if(CONTACT_EMAIL){mail.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURICompone
 else{mail.addEventListener('click',e=>{e.preventDefault();copy(intro)});mail.textContent='Copy intro note';$('briefBtn').style.display='none'}
 const tabs=[...document.querySelectorAll('[role=tab]')];tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);$(x.getAttribute('aria-controls')).hidden=!on;if(on)$(x.getAttribute('aria-controls')).classList.add('in')})}));
 $('pilotForm').addEventListener('submit',e=>{e.preventDefault();const role=$('fRole').value,name=$('fName').value.trim();if(!role||!name){toast('Please add your role and name');return}const co=$('fCo').value.trim(),msg=$('fMsg').value.trim();const body=`Role: ${role}\nName: ${name}\nCompany: ${co||'-'}\n\n${msg||''}`;const subj=`Founding pilot: ${role}${co?' · '+co:''}`;if(CONTACT_EMAIL){location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body)}else{copy(subj+'\n'+body)}});
-$('csvBtn').addEventListener('click',()=>{const csv='run_id,production_metres,fabric_width_m,gsm,cutting_utilisation_pct,fibre_composition,actual_scrap_kg\nSF-DEMO,18000,1.6,180,84,100% cotton,\n';const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='scrap-futures-sample-input.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Sample input downloaded')});
+$('csvBtn').addEventListener('click',()=>{const csv='run_id,garment,size_mix,fibre,colour,fabric_metres,fabric_width_m,gsm,marker_efficiency,offcut_kg_weighed\nSF-DEMO,tee,standard,cotton,white,18000,1.8,180,,\n';const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='scrap-futures-sample-input.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Sample input downloaded')});
 $('menu').addEventListener('click',()=>{const o=$('links').classList.toggle('open');$('menu').setAttribute('aria-expanded',String(o))});
 document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>{$('links').classList.remove('open');$('menu').setAttribute('aria-expanded','false')}));
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'))}
