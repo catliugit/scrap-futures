@@ -9,3 +9,6 @@ data/staged/
 data/features/
 models/_test_export.json
 .venv/
+.omc/
+.claude/
+CLAUDE.local.md
