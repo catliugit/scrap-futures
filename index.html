@@ -292,6 +292,19 @@ p{margin:0}
 .form .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form small{font-size:.72rem;color:var(--on-dark-2)}
 @media(max-width:760px){.tabpanel{grid-template-columns:1fr}.form .row2{grid-template-columns:1fr}}
+/* v4: status, reuse, request */
+.proof-in span b{color:#fff;font-size:.8rem;letter-spacing:0;text-transform:none;margin-right:2px}
+.route{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.route .card{display:flex;flex-direction:column}
+.route .card h3{margin-top:14px}
+.route .who{margin-top:auto;padding-top:18px;font-size:.8rem;color:var(--ink);font-weight:600}
+.st{display:inline-block;font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:5px;margin-left:8px;vertical-align:1px;background:#E3F2EE;color:var(--teal-d)}
+.st.plan{background:#FFF1D6;color:#7A4E00}
+.card.hl .st{background:rgba(217,241,126,.16);color:var(--lime)}
+.req .lede{max-width:520px}
+.req .ask .btn{width:100%;justify-content:center}
+.form .hp{position:absolute;left:-9999px}
+@media(max-width:1040px){.route{grid-template-columns:1fr}}
 footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 .foot nav{display:flex;gap:22px;flex-wrap:wrap}
@@ -356,6 +369,8 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <a href="#problem">Problem</a>
       <a href="#how">Product</a>
       <a href="#demo">Demo</a>
+      <a href="#reuse">Reuse</a>
+      <a href="#request">Request</a>
       <a href="#founder">Founder</a>
       <a class="btn btn-lime btn-sm" href="#contact">Get updates</a>
     </nav>
@@ -369,10 +384,10 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div>
       <span class="pill"><i></i> Pre-seed · London · Circular materials</span>
       <h1>Predict what’s left.<br><span class="serif">Plan what’s next.</span></h1>
-      <p class="lede">Scrap Futures turns cutting-room data into forward feedstock. We forecast textile offcuts <em>before</em> the first cut, grade them in the industry’s standard waste-data format, and let recyclers reserve supply ahead of time, so they can plan, and finance, their capacity.</p>
+      <p class="lede">Scrap Futures turns cutting-room data into forward feedstock. We forecast textile offcuts <em>before</em> the first cut, grade them in the industry’s standard waste-data format, and let recyclers reserve supply ahead of time, so they can plan, and finance, their capacity. Roll ends and larger pieces go to reuse first.</p>
       <div class="cta-row">
         <a class="btn btn-lime" href="#demo">Try the forecast <span aria-hidden="true">→</span></a>
-        <a class="btn btn-line" href="#contact">Sign up for updates</a>
+        <a class="btn btn-line" href="#request">Post a material request</a>
       </div>
       <div class="hero-meta">
         <div><b>Pre-consumer</b>Factory offcuts, not post-consumer</div>
@@ -406,9 +421,10 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="proof" aria-label="Where we are">
   <div class="wrap proof-in">
     <b>Where we are · Nov 2026</b>
-    <span>Concept stage, open prototype below</span>
-    <span>Early-access list open</span>
-    <span>Research grounded in Textile Exchange, EU and LightCastle sources</span>
+    <span><b>Live:</b> this site, material requests (matched by hand)</span>
+    <span><b>Prototype:</b> offcut forecast, trained on simulated data</span>
+    <span><b>Planned:</b> factory pilots, reservations, reuse listings</span>
+    <span>No customers or stock yet</span>
   </div>
 </section>
 
@@ -459,7 +475,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <article class="step reveal"><div class="n">01</div><h3>Read the run</h3><p>Ingest production orders, fabric specs and marker (cutting-layout) files from the factory.</p></article>
       <article class="step reveal"><div class="n">02</div><h3>Forecast the offcut</h3><p>Predict volume and composition per run, then calibrate against actual weighed output.</p></article>
       <article class="step reveal"><div class="n">03</div><h3>Grade the lots</h3><p>Describe lots by fibre, colour, form and source, aligned to Textile Exchange’s Recycled Material Data Form.</p></article>
-      <article class="step reveal"><div class="n">04</div><h3>Reserve, ship, verify</h3><p>Recyclers reserve forecast lots before cutting; weights and shipment evidence close the loop for brand reporting.</p></article>
+      <article class="step reveal"><div class="n">04</div><h3>Reserve, ship, verify</h3><p>Each lot is listed as <b>Expected</b>, then <b>Confirmed</b> once weighed. Buyers reserve expected lots; weights and shipment evidence close the loop.</p></article>
     </div>
     <div class="datanote reveal"><span class="ic">🔒</span><p><b>Your production data stays yours.</b> Pilots run under NDA. We use only what the forecast needs, never share one brand’s or factory’s data with another, and delete pilot data on request.</p></div>
   </div>
@@ -522,6 +538,56 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   </div>
 </section>
 
+<!-- REUSE FIRST -->
+<section class="sec" id="reuse">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Reuse first</div><h2>Not every offcut is scrap.</h2></div>
+      <p class="lede">A cutting run leaves more than small trimmings. Roll ends and larger pieces still have a use as fabric, so they’re offered for reuse before anything goes to a recycler. The forecast already models roll-end remnants; predicting usable piece sizes is the next step.</p>
+    </div>
+    <div class="route">
+      <article class="card reveal"><span class="k">Roll ends &amp; short lengths <span class="st plan">Planned</span></span><h3>Continuous fabric, 1 m and up</h3><p>Leftover lengths at full width, described by composition, width and usable metres rather than weight.</p><span class="who">→ Designers, small brands, costume and production teams</span></article>
+      <article class="card reveal"><span class="k">Large panels <span class="st plan">Planned</span></span><h3>Pieces of 50 × 50 cm or more</h3><p>Sorted by fibre and colour family into bundles, when there are enough to make collection worthwhile.</p><span class="who">→ Schools, workshops, makers</span></article>
+      <article class="card hl reveal"><span class="k">Bulk offcuts <span class="st">Core</span></span><h3>Graded feedstock</h3><p>Everything too small or mixed to reuse, graded by fibre, colour and form and matched to a recycler before the cut.</p><span class="who" style="color:var(--lime)">→ Mechanical and chemical recyclers</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST -->
+<section class="sec dark req close" id="request">
+  <div class="wrap close-in">
+    <div class="reveal">
+      <div class="eyebrow">Post a request</div>
+      <h2>Tell us what material <span class="serif">you need.</span></h2>
+      <p class="lede" style="margin-top:22px">Recyclers: the grade, volume and timing you’re buying for. Reuse buyers: the fabric, amount and deadline. We check each request against forecast and confirmed lots and reply by email. During the pilot every match is made by hand.</p>
+      <p class="lede" style="margin-top:14px">Have surplus? Choose “Factory / supplier” and tell us what you expect to have.</p>
+    </div>
+    <div class="ask reveal">
+      <h3 id="reqTitle">Post a material request</h3>
+      <form class="form" id="requestForm" name="material-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="material-request">
+        <p class="hp"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="row2">
+          <label>I’m a<select id="rRole" name="role" required><option value="">Choose…</option><option value="recycler">Recycler</option><option value="brand">Brand</option><option value="reuse-designer">Designer / small brand</option><option value="reuse-production">Costume or production team</option><option value="reuse-school">School or workshop</option><option value="supplier">Factory / supplier</option><option value="other">Other</option></select></label>
+          <label>Organisation (optional)<input id="rOrg" name="organisation" type="text" placeholder="Name" autocomplete="organization"></label>
+        </div>
+        <div class="row2">
+          <label>Your name<input id="rName" name="name" type="text" placeholder="Full name" autocomplete="name" required></label>
+          <label>Email<input id="rEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+        </div>
+        <label><span id="rMatLabel">What material do you need?</span><textarea id="rMat" name="material" placeholder="e.g. white 100% cotton jersey offcuts, or dark green cotton twill for costumes" required></textarea></label>
+        <div class="row2">
+          <label>Amount<input id="rAmount" name="amount" type="text" placeholder="e.g. 2 t a month, or 25 m"></label>
+          <label><span id="rWhenLabel">Needed by</span><input id="rWhen" name="when" type="text" placeholder="e.g. Q2 2027"></label>
+        </div>
+        <label>Location<input id="rLoc" name="location" type="text" placeholder="e.g. London, or delivered to Porto"></label>
+        <button class="btn btn-lime" type="submit" id="rSubmit">Send request <span aria-hidden="true">→</span></button>
+        <small>Used only to reply to you. If sending fails, your email app opens with the details filled in.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- COMPETITION -->
 <section class="sec why" id="competition">
   <div class="wrap">
@@ -562,7 +628,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <article class="step reveal"><div class="n">03</div><h3>Displace</h3><p>Recycled fibre replaces virgin cotton and polyester in new garments.</p></article>
       <article class="step reveal"><div class="n">04</div><h3>Build capacity</h3><p>Forward supply helps recyclers finance plants, including in garment-producing countries.</p></article>
     </div>
-    <div class="datanote reveal"><span class="ic">📏</span><p><b>What every pilot will report:</b> forecast vs weighed kg, kg delivered to fibre-to-fibre recyclers, and estimated CO2e avoided using published life-cycle factors, with the method shown.</p></div>
+    <div class="datanote reveal"><span class="ic">📏</span><p><b>We count what moves.</b> No impact figures yet: no material has moved so far. Pilots will report forecast vs weighed kg, and kg delivered by route (reused, recycled). Any CO2e figure will use a cited published factor and be labelled as an estimate.</p></div>
   </div>
 </section>
 
@@ -608,7 +674,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     <div class="road">
       <div class="ph now reveal"><span class="when">Next 30 days</span><h3>Discovery</h3><ul><li>15 brand sourcing / sustainability leads</li><li>5 mechanical &amp; chemical recyclers: “would a 6-month forward forecast change your purchasing or financing?”</li><li>Forecast one real cutting layout</li></ul><div class="gate"><b>Gate:</b> 6 brand calls, 2 recyclers name grades and volumes</div></div>
       <div class="ph reveal"><span class="when">Months 2–4</span><h3>First pilot</h3><ul><li>1 brand, 1–2 factories</li><li>Forecast vs. weighed actuals</li><li>First recycler letter of intent</li></ul><div class="gate"><b>Gate:</b> forecast within ±15%, 1 LOI signed</div></div>
-      <div class="ph reveal"><span class="when">Months 5–9</span><h3>First matches</h3><ul><li>RMDF-aligned grade spec</li><li>First verified lots shipped</li><li>Brand reporting pack</li></ul><div class="gate"><b>Gate:</b> 3 brand programmes</div></div>
+      <div class="ph reveal"><span class="when">Months 5–9</span><h3>First matches</h3><ul><li>RMDF-aligned grade spec</li><li>First verified lots shipped</li><li>Roll ends offered to London reuse buyers</li><li>Brand reporting pack</li></ul><div class="gate"><b>Gate:</b> 3 brand programmes</div></div>
       <div class="ph reveal"><span class="when">Months 10–24</span><h3>Platform</h3><ul><li>Marker-file ingestion at scale</li><li>Self-serve recycler matching</li><li>EPR-ready data exports</li></ul><div class="gate"><b>Gate:</b> ~10 brands, founder break-even</div></div>
     </div>
   </div>
@@ -623,6 +689,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <details><summary>How is this different from waste-traceability platforms?</summary><p>Traceability platforms such as Reverse Resources map and trace factory waste after it’s generated. Scrap Futures starts earlier: it forecasts offcuts from the cutting plan before the cut, so lots can be graded and matched to a recycler in advance.</p></details>
       <details><summary>Do you buy, store or handle the material?</summary><p>No. Material ships directly from the factory to the recycler. We provide the forecast, the grading, the match and the evidence trail.</p></details>
       <details><summary>What data do you need from a factory?</summary><p>Production orders, fabric specifications (composition, width, GSM) and marker or cutting-layout files where available. Weighed offcut output after each run lets us calibrate the forecast.</p></details>
+      <details><summary>Is this only for recyclers?</summary><p>No. Reuse comes first: roll ends and larger pieces are offered as fabric to designers, productions and schools, and recyclers take what can’t be reused. Recycling is the core today because that’s where the forecast already works; reuse listings are planned.</p></details>
       <details><summary>Who defines the grades?</summary><p>We build on Textile Exchange’s Recycled Material Data Form (fibre composition, colour, origin and source) and map it to each recycler’s acceptance specs, rather than inventing a parallel standard.</p></details>
       <details><summary>What will a pilot involve?</summary><p>One brand, one or two factories, and a few production runs. We forecast each run, compare it with weighed actuals, and work towards a first recycler match. Pilots haven’t opened yet. Sign up below to hear first.</p></details>
       <details><summary>Why London?</summary><p>London sits close to UK and EU brands facing EPR and ESPR, and to Europe’s recycling and climate-investment ecosystem. The factories are in sourcing hubs such as Bangladesh, Pakistan, Portugal and Turkey.</p></details>
@@ -660,7 +727,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="foot">
       <a class="brand" href="#top"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#197F70" stroke-width="2"/><path d="M9 12H31M9 20H31M9 28H31" stroke="#197F70" stroke-width="3" stroke-linecap="round"/><path d="M15 8V15M15 25V32M25 8V15M25 25V32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M15 15V25M25 15V25" stroke="#D9F17E" stroke-width="3" stroke-linecap="round"/></svg>Scrap Futures</a>
-      <nav><a href="#problem">Problem</a><a href="#how">Product</a><a href="#demo">Demo</a><a href="#impact">Impact</a><a href="#founder">Founder</a><a href="#faq">FAQ</a><a href="#contact">Updates</a></nav>
+      <nav><a href="#problem">Problem</a><a href="#how">Product</a><a href="#demo">Demo</a><a href="#reuse">Reuse</a><a href="#request">Request</a><a href="#impact">Impact</a><a href="#founder">Founder</a><a href="#faq">FAQ</a><a href="#contact">Updates</a></nav>
     </div>
     <p>© 2026 Scrap Futures · London. Early-stage venture. Product screens and demo figures are illustrative prototypes; model outputs are hypotheses under validation. No customers or recycler commitments are implied.</p>
   </div>
@@ -718,6 +785,12 @@ if(CONTACT_EMAIL){mail.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURICompone
 else{mail.addEventListener('click',e=>{e.preventDefault();copy(intro)});mail.textContent='Copy intro note';$('briefBtn').style.display='none'}
 const tabs=[...document.querySelectorAll('[role=tab]')];tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);$(x.getAttribute('aria-controls')).hidden=!on;if(on)$(x.getAttribute('aria-controls')).classList.add('in')})}));
 $('pilotForm').addEventListener('submit',e=>{e.preventDefault();const role=$('fRole').value,name=$('fName').value.trim();if(!role||!name){toast('Please add your role and name');return}const co=$('fCo').value.trim(),msg=$('fMsg').value.trim();const body=`Role: ${role}\nName: ${name}\nCompany: ${co||'-'}\n\n${msg||''}`;const subj=`Scrap Futures updates: ${role}${co?' · '+co:''}`;if(CONTACT_EMAIL){location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body)}else{copy(subj+'\n'+body)}});
+/* material request form: Netlify Forms, with an email fallback for GitHub Pages */
+const rq=$('requestForm');
+function setMode(r){const sup=r==='supplier';$('reqTitle').textContent=sup?'Tell us about your surplus':'Post a material request';$('rMatLabel').textContent=sup?'What material do you expect to have?':'What material do you need?';$('rWhenLabel').textContent=sup?'Available from':'Needed by'}
+$('rRole').addEventListener('change',()=>setMode($('rRole').value));
+function rqMail(){const v=id=>$(id).value.trim()||'-';const body=`Role: ${$('rRole').selectedOptions[0].text}\nName: ${v('rName')}\nEmail: ${v('rEmail')}\nOrganisation: ${v('rOrg')}\n\n${$('rMatLabel').textContent} ${v('rMat')}\nAmount: ${v('rAmount')}\n${$('rWhenLabel').textContent}: ${v('rWhen')}\nLocation: ${v('rLoc')}`;location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Scrap Futures request: '+v('rMat').slice(0,60))+'&body='+encodeURIComponent(body)}
+rq.addEventListener('submit',async e=>{e.preventDefault();if(!$('rRole').value||!$('rName').value.trim()||!/^\S+@\S+\.\S+$/.test($('rEmail').value.trim())||!$('rMat').value.trim()){toast('Please add your role, name, email and the material');return}const btn=$('rSubmit');btn.disabled=true;try{const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(rq)).toString()});if(!res.ok)throw new Error(res.status);rq.reset();setMode('');toast('Thanks, it’s sent. We’ll reply by email.')}catch(_){toast('Opening your email app instead');rqMail()}finally{btn.disabled=false}});
 $('csvBtn').addEventListener('click',()=>{const csv='run_id,garment,size_mix,fibre,colour,fabric_metres,fabric_width_m,gsm,marker_efficiency,offcut_kg_weighed\nSF-DEMO,tee,standard,cotton,white,18000,1.8,180,,\n';const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='scrap-futures-sample-input.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Sample input downloaded')});
 $('menu').addEventListener('click',()=>{const o=$('links').classList.toggle('open');$('menu').setAttribute('aria-expanded',String(o))});
 document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>{$('links').classList.remove('open');$('menu').setAttribute('aria-expanded','false')}));
