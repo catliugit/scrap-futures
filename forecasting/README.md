@@ -99,4 +99,4 @@ The data contract rejects runs outside realistic ranges. That's how the 93% cap 
 
 ---
 
-Built by [Cat Liu](https://www.linkedin.com/in/cathyqliu/): 7 years of data engineering (AWS, Databricks, Spark), MSc in AI & Data Analytics.
+Built by [Cathy Liu](https://www.linkedin.com/in/cathyqliu/): 7+ years in data analytics and BI across aviation, banking and healthcare, MSc in AI & Data Analytics (Merit).
