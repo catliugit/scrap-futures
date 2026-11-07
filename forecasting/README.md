@@ -1,8 +1,8 @@
-# offcut-forecast
+# Scrap Futures: forecasting engine
 
 **Forecast cutting-room textile waste before the fabric is cut, then grade it and match it to recyclers.**
 
-The ML and agent layer behind [Scrap Futures](https://catliugit.github.io/scrap-futures/). Garment factories know roughly how much fabric a cutting plan (a *marker*) wastes. They don't know how much offcut they'll actually weigh at the end of a run, because real cutting rooms lose fabric the marker never shows. This project models that gap, forecasts weighed offcuts with an uncertainty range, and turns the forecast into graded lots a recycler can plan around.
+The ML and agent layer of [Scrap Futures](https://scrapfutures.netlify.app/) (this folder was previously the separate `offcut-forecast` repo). Garment factories know roughly how much fabric a cutting plan (a *marker*) wastes. They don't know how much offcut they'll actually weigh at the end of a run, because real cutting rooms lose fabric the marker never shows. This project models that gap, forecasts weighed offcuts with an uncertainty range, and turns the forecast into graded lots a recycler can plan around.
 
 ![Forecast error by method](docs/figures/error_by_method.png)
 
@@ -42,6 +42,7 @@ flowchart LR
 ## Run it
 
 ```bash
+cd forecasting
 pip install -r requirements.txt
 make data     # simulate + validate 8,000 runs (~1 min)
 make train    # train, evaluate, export browser model, draw figures
