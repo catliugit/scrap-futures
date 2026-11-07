@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scrap Futures — Know your fabric waste before you cut</title>
-<meta name="description" content="Scrap Futures predicts garment factory fabric offcuts before production starts, then lines up a buyer: designers and makers for usable pieces, recyclers for the rest.">
+<title>Scrap Futures | No unsold clothes wasted</title>
+<meta name="description" content="Scrap Futures helps fashion brands route unsold stock to its best legal home and prove it under the EU ban on destroying unsold clothes, then buy less next season.">
 <meta name="theme-color" content="#16211F">
-<meta property="og:title" content="Scrap Futures — Know your fabric waste before you cut">
-<meta property="og:description" content="We forecast fabric offcuts before the cut and line up who will reuse or recycle them.">
+<meta property="og:title" content="Scrap Futures | No unsold clothes wasted">
+<meta property="og:description" content="Route unsold stock, prove it to the EU, and make less of it next season.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -355,6 +355,21 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 
+.bio-h{font-size:1rem;letter-spacing:0;margin:22px 0 10px;color:var(--teal-d)}
+.bio .bio-h:first-child{margin-top:0}
+/* v6: ledger */
+.lg-row{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;font-size:.78rem;padding:9px 11px;border-radius:9px;background:#fff;border:1px solid #E5ECE9}
+.lg-row b{font-weight:650}
+.lg-row .rt{font-size:.66rem;font-weight:700;padding:3px 7px;border-radius:5px;background:#E3F2EE;color:var(--teal-d);white-space:nowrap}
+.lg-row .up{font-variant-numeric:tabular-nums;color:var(--teal-d);font-weight:700}
+.lg-checks{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px;font-size:.74rem;color:#55635F}
+.lg-checks span::before{content:"✓ ";color:var(--teal);font-weight:800}
+.rule{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rule .card h3{margin:10px 0 8px}
+.rule .when{font-family:var(--serif);font-style:italic;font-size:1.9rem;color:var(--teal);line-height:1}
+.rule .card.hl .when{color:var(--lime)}
+@media(max-width:1040px){.rule{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.rule{grid-template-columns:1fr}.lg-checks{grid-template-columns:1fr}}
 /* v5: customer-first */
 .pick{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
 .pick span{display:block;font-size:.78rem;color:var(--on-dark-2);margin-bottom:12px}
@@ -393,11 +408,11 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
     </a>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
     <nav class="links" id="links" aria-label="Main">
+      <a href="#rule">The rule</a>
       <a href="#how">How it works</a>
       <a href="#for">Who it’s for</a>
-      <a href="#demo">Demo</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-lime btn-sm" href="#join">Become a pilot partner</a>
+      <a class="btn btn-lime btn-sm" href="#join">Become a design partner</a>
     </nav>
   </div>
 </header>
@@ -407,79 +422,95 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="hero dark">
   <div class="wrap hero-grid">
     <div>
-      <span class="pill"><i></i> Now looking for pilot partners · London</span>
-      <h1>Know your fabric waste <span class="serif">before you cut.</span></h1>
-      <p class="lede">Garment factories lose 10–20% of the fabric they buy as offcuts. Scrap Futures predicts how much, and what kind, before production starts, then lines up a buyer for it: designers and makers for usable pieces, recyclers for the rest.</p>
+      <span class="pill"><i></i> In development · looking for design partners · London</span>
+      <h1>No unsold clothes <span class="serif">wasted.</span></h1>
+      <p class="lede">Since July 2026, large brands selling in the EU can no longer destroy unsold clothes or shoes. Scrap Futures finds the best legal home for every unsold batch (off-price, resale, donation or reprocessing), keeps the proof the rules require, and helps you buy less next season.</p>
       <div class="cta-row">
-        <a class="btn btn-lime" href="#demo">Try the forecast <span aria-hidden="true">→</span></a>
-        <a class="btn btn-line" href="#join">Become a pilot partner</a>
+        <a class="btn btn-lime" href="#join">Become a design partner <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#rule">What the rule means</a>
       </div>
       <div class="pick">
         <span>See what it does for you:</span>
-        <nav aria-label="Choose your role"><a href="#for-brands">I’m a brand</a><a href="#for-factories">I run a factory</a><a href="#for-recyclers">I’m a recycler</a><a href="#for-makers">I need fabric</a></nav>
+        <nav aria-label="Choose your role"><a href="#for-brands">I’m a brand</a><a href="#for-outlets">I buy or resell stock</a><a href="#for-charities">I run a charity or social enterprise</a></nav>
       </div>
     </div>
     <div style="position:relative">
-      <div class="card-ui" role="img" aria-label="Product concept: a forecast for a production run, showing projected offcut lots by fibre grade">
+      <div class="card-ui" role="img" aria-label="Product concept: ageing stock batches with a recommended route and expected extra recovery, and compliance checks">
         <div class="ui-top"><span class="ui-dots"><i></i><i></i><i></i></span><span class="ui-badge">ILLUSTRATIVE PROTOTYPE</span></div>
         <div class="ui-head">
-          <div><small>RUN SF-0142 · JERSEY TEE · 18,000 m</small><h4>Projected offcuts, pre-cut</h4></div>
-          <div class="ui-big">829<span> kg</span></div>
+          <div><small>AUTUMN/WINTER 26 · AGEING STOCK</small><h4>Extra recovered vs liquidation</h4></div>
+          <div class="ui-big">+£111<span>k</span></div>
         </div>
-        <div class="ui-pattern">
-          <svg viewBox="0 0 490 170" aria-hidden="true"><defs><pattern id="w" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7h14M7 0v14" stroke="#B9C7C1" stroke-width=".5" opacity=".6"/></pattern></defs><rect width="490" height="170" rx="8" fill="url(#w)"/><g fill="#197F70" stroke="#EEF2EF" stroke-width="3"><path d="M18 26l34-12 18 24 32 6-8 50-32-3-2 66-44 0-3-64-26 0 0-46Z"/><path d="M138 26l34-12 18 24 32 6-8 50-32-3-2 66-44 0-3-64-26 0 0-46Z"/><path d="M258 26l34-12 18 24 32 6-8 50-32-3-2 66-44 0-3-64-26 0 0-46Z"/><path d="M372 16h78l12 142h-34l-10-92-8 92h-34Z"/></g><g fill="#D9F17E" stroke="#9DB33C" stroke-width="1"><path d="M108 6h26l-18 22-8-8Z"/><path d="M228 10h24l-8 60-18-2Z"/><path d="M226 112l30-8-4 60-30-2Z"/><path d="M342 108l26-6-2 62-26-2Z"/><path d="M466 18h18l-2 140h-16Z"/></g></svg>
+        <div class="ui-rows" style="margin-top:14px">
+          <div class="lg-row"><b>Wool coats, navy · 1,240</b><span class="rt">OFF-PRICE</span><span class="up">+£41k</span></div>
+          <div class="lg-row"><b>Knit dresses · 3,050</b><span class="rt">RESALE</span><span class="up">+£58k</span></div>
+          <div class="lg-row"><b>Leather boots · 410</b><span class="rt">OUTLET</span><span class="up">+£12k</span></div>
+          <div class="lg-row"><b>Printed tees, damaged · 620</b><span class="rt">DONATION</span><span class="up">logged</span></div>
         </div>
-        <div class="ui-rows">
-          <div class="ui-row"><b>Lot A · White cotton jersey</b><span class="tag">GRADE C1</span><span class="kg">412 kg</span></div>
-          <div class="ui-row"><b>Lot B · Dyed cotton, dark</b><span class="tag">GRADE C3</span><span class="kg">296 kg</span></div>
-          <div class="ui-row"><b>Lot C · Rib trims, mixed</b><span class="tag t2">REVIEW</span><span class="kg">121 kg</span></div>
-        </div>
+        <div class="lg-checks"><span>Mapped to EU codes</span><span>8-week donation offers</span><span>Waste-operator statements</span><span>Table matches records</span></div>
       </div>
-      <div class="float"><span class="c">↗</span><div><b>Feedstock known</b>before cutting starts</div></div>
+      <div class="float"><span class="c">↗</span><div><b>Evidence ready</b>for the EU disclosure</div></div>
     </div>
+  </div>
+</section>
+
+<!-- THE RULE -->
+<section class="sec" id="rule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">The rule</div><h2>Destroying unsold clothes is now banned.</h2></div>
+      <p class="lede">The EU’s Ecodesign Regulation bans large companies from destroying unsold apparel, accessories and footwear, and “destroying” includes shredding for recycling. UK and other non-EU brands selling into the EU are covered too.</p>
+    </div>
+    <div class="rule">
+      <article class="card reveal"><span class="when">2024</span><h3>Disclose</h3><p>Large companies publish, every year, what unsold stock they discarded and why.</p></article>
+      <article class="card hl reveal"><span class="when">Jul 2026</span><h3>Ban in force</h3><p>No destroying unsold clothes or shoes, except under 10 narrow exceptions, each needing evidence.</p></article>
+      <article class="card reveal"><span class="when">Mar 2027</span><h3>Standard table</h3><p>A fixed disclosure format, checked against your records to within 10%.</p></article>
+      <article class="card reveal"><span class="when">2030</span><h3>Medium firms join</h3><p>The ban extends to medium-sized companies: several times more brands in scope.</p></article>
+    </div>
+    <div class="datanote reveal"><span class="ic">§</span><p><b>Example of the paperwork:</b> before unsold goods can be destroyed under the donation exception, they must be offered for at least 8 weeks to at least 3 social-economy organisations. Records are kept for 5 years and produced within 30 days of a request. Sources: Regulation (EU) 2024/1781; Delegated Regulation (EU) 2026/296; Implementing Regulation (EU) 2026/2.</p></div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="sec" id="how">
+<section class="sec why" id="how">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow">How it works</div><h2>Three steps, before a single garment is cut.</h2></div>
-      <p class="lede">We work with the factory’s production plan, so leftovers are spoken for before they exist. Nothing changes on the cutting floor.</p>
+      <div><div class="eyebrow">How it works</div><h2>Route it. Prove it. Make less of it.</h2></div>
+      <p class="lede">Scrap Futures is software with a partner network. Stock moves straight from your warehouse to the outlet; we never hold goods.</p>
     </div>
     <div class="grid3 how3">
-      <article class="step reveal"><div class="n">01</div><h3>Share an upcoming order</h3><p>The garment, fabric and quantity. Cutting layouts help, but aren’t required.</p></article>
-      <article class="step reveal"><div class="n">02</div><h3>Get the leftover forecast</h3><p>Before cutting starts, you see the expected offcuts by weight, fibre and colour, with a likely range.</p></article>
-      <article class="step reveal"><div class="n">03</div><h3>We find it a home</h3><p>Usable pieces go to designers and makers; the rest goes to recyclers, sorted. It ships straight from the factory, and we confirm what moved.</p></article>
+      <article class="step reveal"><div class="n">01</div><h3>Upload your ageing stock</h3><p>A stock export from your systems is enough to start. We map each product to the EU customs code and weight the disclosure needs.</p></article>
+      <article class="step reveal"><div class="n">02</div><h3>Route each batch</h3><p>See which lines are heading for unsold, and the best legal outlet for each, with the expected money back compared with your liquidator.</p></article>
+      <article class="step reveal"><div class="n">03</div><h3>Get the proof, then buy less</h3><p>The donation offers, inspection records and waste-operator statements are logged as you go, and the EU table is one click. What went unsold feeds next season’s buying forecast.</p></article>
     </div>
-    <div class="datanote reveal"><span class="ic">🔒</span><p><b>Your production data stays yours.</b> Pilots run under NDA. We use only what the forecast needs, never share one company’s data with another, and delete pilot data on request.</p></div>
+    <div class="datanote reveal"><span class="ic">🔒</span><p><b>Your stock data stays yours.</b> Design partnerships run under NDA. We use only what routing and reporting need, never share one brand’s data with another, and delete pilot data on request.</p></div>
   </div>
 </section>
 
 <!-- WHO IT'S FOR -->
-<section class="sec why" id="for">
+<section class="sec" id="for">
   <div class="wrap">
     <div class="sec-head reveal">
       <div><div class="eyebrow">Who it’s for</div><h2>What you get.</h2></div>
-      <p class="lede">One forecast, four groups who benefit. Pick yours.</p>
+      <p class="lede">Brands pay. Everyone they send stock to joins free.</p>
     </div>
     <div class="aud">
-      <article class="card reveal" id="for-brands"><span class="k">For brands</span><h3>Proof of where your waste goes.</h3><p>Know what your orders will leave behind, and show where it ended up.</p>
-        <ul><li>An offcut forecast for each order, across your factories</li><li>Records of where every lot went, reused or recycled, for reporting and upcoming EU rules</li><li>A route to recycled material for your own products</li></ul>
-        <p class="give"><b>What we need:</b> upcoming orders and an introduction to your factories.</p>
-        <a class="btn btn-ghost btn-sm" href="#join" data-role="brand">Talk to us as a brand →</a></article>
-      <article class="card reveal" id="for-factories"><span class="k">For factories</span><h3>Free, and nothing changes on your floor.</h3><p>Turn offcuts from a disposal cost into material someone has already asked for.</p>
-        <ul><li>A forecast of offcuts before every run</li><li>A breakdown of where fabric is lost</li><li>Buyers lined up, so offcuts are collected instead of dumped</li></ul>
-        <p class="give"><b>What we need:</b> order details, and the weight of offcuts after each run.</p>
-        <a class="btn btn-ghost btn-sm" href="#join" data-role="supplier">Join as a factory →</a></article>
-      <article class="card hl reveal" id="for-recyclers"><span class="k">For recyclers</span><h3>Know your supply months ahead.</h3><p>Plan and finance capacity on material you can see coming.</p>
-        <ul><li>Expected volumes by fibre and colour, before cutting</li><li>Lots sorted to your specification</li><li>Reserve supply early, a forward commitment you can show lenders</li></ul>
-        <p class="give"><b>What we need:</b> the grades, volumes and timing you buy for.</p>
-        <a class="btn btn-lime btn-sm" href="#join" data-role="recycler">Tell us what you buy →</a></article>
-      <article class="card reveal" id="for-makers"><span class="k">For designers &amp; makers <span class="st plan">Coming soon</span></span><h3>Good fabric, before it’s thrown away.</h3><p>Roll ends and larger pieces from real production runs, starting in London.</p>
-        <ul><li>Leftover lengths and panels, described by fibre, colour and size</li><li>Ask for a specific fabric and we’ll look out for it</li><li>For designers, small brands, costume teams, schools and workshops</li></ul>
-        <p class="give"><b>What we need:</b> the fabric, amount and deadline.</p>
-        <a class="btn btn-ghost btn-sm" href="#join" data-role="reuse-designer">Request fabric →</a></article>
+      <article class="card hl reveal" id="for-brands"><span class="k">For fashion & footwear brands</span><h3>Recover more, prove everything.</h3><p>For brands with 250+ staff (or over €50m turnover) selling into the EU.</p>
+        <ul><li>A route for every unsold batch, with the expected money back</li><li>The evidence each exception needs, logged as you work</li><li>The EU disclosure table, reconciled to your records</li><li>A buying forecast so less goes unsold next season</li></ul>
+        <p class="give"><b>What we need:</b> a stock-ageing export and 30 minutes with your ops and sustainability leads.</p>
+        <a class="btn btn-lime btn-sm" href="#join" data-role="brand">Become a design partner →</a></article>
+      <article class="card reveal" id="for-outlets"><span class="k">For off-price, outlet & resale partners</span><h3>Well-described stock, steadily.</h3><p>Buyers and platforms that give unsold stock a second life.</p>
+        <ul><li>Batches described by product, size, condition and quantity</li><li>Clean paperwork with every transfer</li><li>Free to join</li></ul>
+        <p class="give"><b>What we need:</b> the categories, volumes and regions you take.</p>
+        <a class="btn btn-ghost btn-sm" href="#join" data-role="outlet">Join as an outlet →</a></article>
+      <article class="card reveal" id="for-charities"><span class="k">For charities & social enterprises</span><h3>Donations that come with the paperwork.</h3><p>Organisations that receive donated clothing and footwear.</p>
+        <ul><li>Offers of new, unsold stock you can accept or decline</li><li>The records brands need, handled for you</li><li>Free to join</li></ul>
+        <p class="give"><b>What we need:</b> what you can accept, and where.</p>
+        <a class="btn btn-ghost btn-sm" href="#join" data-role="charity">Join as a charity →</a></article>
+      <article class="card reveal" id="for-reprocessors"><span class="k">For textile reprocessors</span><h3>The last resort, done properly.</h3><p>For stock that genuinely can’t be sold or donated.</p>
+        <ul><li>Batches with the exception already documented</li><li>The statement you’re legally owed, in the right format</li><li>Free to join</li></ul>
+        <p class="give"><b>What we need:</b> materials accepted and capacity.</p>
+        <a class="btn btn-ghost btn-sm" href="#join" data-role="reprocessor">Join as a reprocessor →</a></article>
     </div>
   </div>
 </section>
@@ -488,8 +519,8 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="sec demo dark" id="demo">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow">See it work</div><h2>Try the forecast.</h2></div>
-      <p class="lede">Pick a garment and fabric, and the model estimates the offcuts before any cutting happens. It’s the real model, running in your browser, trained on simulated production data while we gather factory data. <a href="https://github.com/catliugit/offcut-forecast" target="_blank" rel="noopener" style="text-decoration:underline">Method on GitHub</a>.</p>
+      <div><div class="eyebrow">From the lab</div><h2>Try our forecasting engine.</h2></div>
+      <p class="lede">Before working on unsold stock, we built a model that forecasts how much fabric a factory will waste before cutting starts. The same approach powers the at-risk scoring in our product. It runs in your browser, trained on simulated production data. <a href="https://github.com/catliugit/scrap-futures/tree/main/forecasting" target="_blank" rel="noopener" style="text-decoration:underline">Code and method on GitHub</a>.</p>
     </div>
     <div class="shell reveal">
       <div class="ctrl">
@@ -544,12 +575,12 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 <section class="sec diff" id="different">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow">Why Scrap Futures</div><h2>Most tools start after the cut. We start before it.</h2></div>
+      <div><div class="eyebrow">Why Scrap Futures</div><h2>Many tools own one piece. We keep the whole record.</h2></div>
     </div>
     <div class="grid3">
-      <article class="card reveal"><span class="k">01</span><h3 style="margin-top:14px">Before, not after</h3><p>Other tools record waste once it’s in a bin. We predict it from the production plan, so a buyer is ready when it’s made.</p></article>
-      <article class="card reveal"><span class="k">02</span><h3 style="margin-top:14px">Reuse first, then recycling</h3><p>Usable fabric goes to people who will make things with it. Only what can’t be reused goes to recyclers.</p></article>
-      <article class="card reveal"><span class="k">03</span><h3 style="margin-top:14px">No warehouse in the middle</h3><p>Material ships straight from the factory to the buyer. We provide the forecast, the sorting, the match and the paperwork.</p></article>
+      <article class="card reveal"><span class="k">01</span><h3 style="margin-top:14px">Every outlet, not one</h3><p>Resale, off-price and donation platforms each handle one channel. We compare them all and route to whatever recovers most.</p></article>
+      <article class="card reveal"><span class="k">02</span><h3 style="margin-top:14px">Proof built in</h3><p>The evidence is created as stock moves, not reconstructed from emails when a regulator asks.</p></article>
+      <article class="card reveal"><span class="k">03</span><h3 style="margin-top:14px">Made for UK brands selling into the EU</h3><p>You’re covered by EU rules, often without an EU compliance team. That’s who we’re built for.</p></article>
     </div>
   </div>
 </section>
@@ -562,7 +593,12 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
       <div class="eyebrow">Founder</div>
       <h2>Cathy Liu</h2>
       <div class="bio">
-        <p class="lede">Data analyst with seven years in aviation, banking and healthcare, building forecasts and reporting at Bank of Hawaii and Hawaiian Airlines. MSc in AI &amp; Data Analytics from Northeastern University London. Cathy started Scrap Futures to put forecasting to work on fabric waste.</p>
+        <h3 class="bio-h">Why I’m building this</h3>
+        <p class="lede">Over the past five years, it feels like we’ve been buying more than ever: more clothes, more deliveries, more things worn a few times and then forgotten. What bothers me most is how normal it’s become. Perfectly good clothes get shredded or burned because that’s cheaper than finding them a home, and most of us never hear about it.</p>
+        <p class="lede">I don’t think the answer is making people feel guilty. It’s making the waste visible, and making the better option the easy one. That’s what Scrap Futures is for: helping brands find a home for every unsold piece, and, over time, make less of what nobody buys. I want to use what I’m good at to help us waste less of what we already have.</p>
+        <h3 class="bio-h">My background</h3>
+        <p class="lede">I’m a data analyst from California, now based in London, with seven years of experience across aviation, banking and healthcare. At Bank of Hawaii I built treasury forecasts and automated financial reporting, cutting manual reporting work by more than half. At Hawaiian Airlines I ran workforce analytics and built the dashboards HR and leadership used for payroll and benefits decisions. Along the way I started my own creative marketing business, working with small businesses across Honolulu.</p>
+        <p class="lede">I recently finished an MSc in AI &amp; Data Analytics at Northeastern University London, where my dissertation tested whether 10 AI models ask the right questions before giving financial advice. Most of my work comes down to the same thing: taking messy data and turning it into something people can act on. Waste is a data problem too. You can’t fix what you can’t see.</p>
       </div>
       <p style="margin-top:24px"><a class="btn btn-teal btn-sm" href="https://www.linkedin.com/in/cathyqliu/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
     </div>
@@ -574,11 +610,11 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="sec-head reveal"><div><div class="eyebrow">FAQ</div><h2>Common questions.</h2></div><p class="lede">Something not covered? Ask in the form below.</p></div>
     <div class="faq reveal">
-      <details><summary>What does it cost?</summary><p>Nothing for factories. For brands and recyclers, we agree terms with each pilot partner.</p></details>
-      <details><summary>Is the forecast proven?</summary><p>Not yet on factory data. The model is trained on simulated production runs, where it lands within about 9% of the actual offcut weight on average. Our first pilot goal is within ±15% on real, weighed offcuts.</p></details>
-      <details><summary>Doesn’t cutting software already know the waste?</summary><p>It knows the planned waste in a cutting layout. It doesn’t predict the full weighed offcut after roll ends, spreading loss and defects, sorted by fibre and colour, early enough to line up a buyer. We aim to work alongside cutting software, not replace it.</p></details>
-      <details><summary>Do you buy, store or handle the material?</summary><p>No. Material ships directly from the factory to the buyer. We provide the forecast, the sorting standard, the match and the paperwork.</p></details>
-      <details><summary>What data do you need from a factory?</summary><p>Order details and fabric specifications (fibre, width, weight), plus cutting layouts if you have them. Weighing the offcuts after each run lets us check and improve the forecast.</p></details>
+      <details><summary>Does the ban apply to UK brands?</summary><p>Yes, if they place clothing or footwear on the EU market and count as a large company (250+ staff, or over €50m turnover and €43m balance sheet, including linked companies). Medium-sized companies are covered from July 2030. This is general information, not legal advice.</p></details>
+      <details><summary>Can’t we just recycle unsold stock?</summary><p>Not freely. Under the EU rules, recycling unsold products counts as destruction. It’s allowed only under one of ten exceptions, with evidence, and after better options such as reuse.</p></details>
+      <details><summary>Is the product live?</summary><p>Not yet. We’re building it with a small group of design partners. Partners shape the product and get early pricing.</p></details>
+      <details><summary>What does it cost?</summary><p>Brands pay a yearly subscription plus a small share of the extra money recovered on routed stock. Outlets, charities and reprocessors join free. Design-partner terms are agreed one-to-one.</p></details>
+      <details><summary>Do you buy or store stock?</summary><p>No. Stock moves directly from the brand’s warehouse to the outlet. We provide the routing, the records and the reporting.</p></details>
     </div>
   </div>
 </section>
@@ -588,29 +624,29 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap close-in">
     <div class="reveal">
       <div class="eyebrow">Get started</div>
-      <h2>Become a <span class="serif">pilot partner.</span></h2>
-      <p class="lede" style="margin-top:22px">We’re looking for our first brands, factories and recyclers, and for designers who need fabric. Tell us who you are and what you need. Cathy replies to every message personally.</p>
+      <h2>Become a <span class="serif">design partner.</span></h2>
+      <p class="lede" style="margin-top:22px">We’re looking for three UK or EU fashion brands to shape the product, and for outlets, charities and reprocessors to route stock to. Tell us who you are. Cathy replies to every message personally.</p>
     </div>
     <div class="ask reveal">
-      <h3 id="reqTitle">Tell us what you need</h3>
+      <h3 id="reqTitle">Tell us about you</h3>
       <form class="form" id="requestForm" name="material-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="material-request">
         <p class="hp"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="row2">
-          <label>I’m a<select id="rRole" name="role" required><option value="">Choose…</option><option value="brand">Brand</option><option value="supplier">Factory / supplier</option><option value="recycler">Recycler</option><option value="reuse-designer">Designer / small brand</option><option value="reuse-production">Costume or production team</option><option value="reuse-school">School or workshop</option><option value="investor">Investor / programme</option><option value="other">Other</option></select></label>
+          <label>I’m a<select id="rRole" name="role" required><option value="">Choose…</option><option value="brand">Fashion or footwear brand</option><option value="outlet">Off-price, outlet or resale</option><option value="charity">Charity or social enterprise</option><option value="reprocessor">Textile reprocessor</option><option value="investor">Investor / programme</option><option value="other">Other</option></select></label>
           <label>Organisation (optional)<input id="rOrg" name="organisation" type="text" placeholder="Name" autocomplete="organization"></label>
         </div>
         <div class="row2">
           <label>Your name<input id="rName" name="name" type="text" placeholder="Full name" autocomplete="name" required></label>
           <label>Email<input id="rEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
         </div>
-        <label><span id="rMatLabel">What do you need?</span><textarea id="rMat" name="material" placeholder="e.g. white 100% cotton jersey offcuts, or dark green cotton twill for costumes" required></textarea></label>
+        <label><span id="rMatLabel">What would you like to talk about?</span><textarea id="rMat" name="material" placeholder="e.g. we send end-of-season stock to two liquidators and aren’t sure how we’ll report it" required></textarea></label>
         <div id="rDetails">
           <div class="row2">
-            <label>Amount<input id="rAmount" name="amount" type="text" placeholder="e.g. 2 t a month, or 25 m"></label>
-            <label><span id="rWhenLabel">Needed by</span><input id="rWhen" name="when" type="text" placeholder="e.g. Q2 2027"></label>
+            <label>Amount<input id="rAmount" name="amount" type="text" placeholder="e.g. 5,000 units a season"></label>
+            <label><span id="rWhenLabel">When</span><input id="rWhen" name="when" type="text" placeholder="e.g. spring 2027"></label>
           </div>
-          <label style="margin-top:12px">Location<input id="rLoc" name="location" type="text" placeholder="e.g. London, or delivered to Porto"></label>
+          <label style="margin-top:12px">Location<input id="rLoc" name="location" type="text" placeholder="e.g. UK and Netherlands"></label>
         </div>
         <button class="btn btn-lime" type="submit" id="rSubmit">Send <span aria-hidden="true">→</span></button>
         <small>Used only to reply to you. If sending fails, your email app opens with the details filled in.</small>
@@ -625,7 +661,7 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
   <div class="wrap">
     <div class="foot">
       <a class="brand" href="#top"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#197F70" stroke-width="2"/><path d="M9 12H31M9 20H31M9 28H31" stroke="#197F70" stroke-width="3" stroke-linecap="round"/><path d="M15 8V15M15 25V32M25 8V15M25 25V32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M15 15V25M25 15V25" stroke="#D9F17E" stroke-width="3" stroke-linecap="round"/></svg>Scrap Futures</a>
-      <nav><a href="#how">How it works</a><a href="#for">Who it’s for</a><a href="#demo">Demo</a><a href="#faq">FAQ</a><a href="#founder">Founder</a><a href="investors.html">For investors</a></nav>
+      <nav><a href="#rule">The rule</a><a href="#how">How it works</a><a href="#for">Who it’s for</a><a href="#demo">Forecasting lab</a><a href="#faq">FAQ</a><a href="#founder">Founder</a><a href="investors.html">For investors</a></nav>
     </div>
     <p>© 2026 Scrap Futures · London. Early-stage venture. Product screens and demo figures are illustrative prototypes; model outputs are hypotheses under validation. No customers or recycler commitments are implied.</p>
   </div>
@@ -676,17 +712,18 @@ fields.forEach(id=>$(id).addEventListener('input',recalc));
 $('garment').addEventListener('change',()=>{const t=typical[$('garment').value];$('width').value=t[0];$('gsm').value=t[1];recalc()});
 $('reset').addEventListener('click',()=>{fields.forEach(id=>$(id).value=defaults[id]);recalc();toast('Scenario reset')});
 $('copyBtn').addEventListener('click',()=>copy(summary));
-const intro='Hi Cathy, I came across Scrap Futures and would like to talk about ';
+const intro='Hi Cathy, I came across Scrap Futures and would like to talk about unsold stock and ';
 const mail=$('mailBtn');mail.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Scrap Futures')+'&body='+encodeURIComponent(intro);
 /* one form for everyone: Netlify Forms, with an email fallback for GitHub Pages */
 const rq=$('requestForm');
 const modes={
- supplier:['Tell us about your surplus','What fabric do you expect to have left over?','Available from',true],
- recycler:['Tell us what you buy','Which grades do you buy, and how much?','Needed by',true],
- brand:['Talk to us as a brand','What would you like to explore?','',false],
+ brand:['Become a design partner','What happens to your unsold stock today?','Next season',true],
+ outlet:['Join as an outlet','What stock do you take, and where?','Available from',true],
+ charity:['Join as a charity','What can you accept, and where?','Available from',true],
+ reprocessor:['Join as a reprocessor','Which materials do you accept?','Available from',true],
  investor:['Get in touch','What are you interested in?','',false],
  other:['Get in touch','What are you interested in?','',false]};
-function setMode(r){const m=modes[r]||(r?['Request fabric','What fabric do you need?','Needed by',true]:['Tell us what you need','What do you need?','Needed by',true]);$('reqTitle').textContent=m[0];$('rMatLabel').textContent=m[1];if(m[2])$('rWhenLabel').textContent=m[2];$('rDetails').hidden=!m[3]}
+function setMode(r){const m=modes[r]||['Tell us about you','What would you like to talk about?','When',true];$('reqTitle').textContent=m[0];$('rMatLabel').textContent=m[1];if(m[2])$('rWhenLabel').textContent=m[2];$('rDetails').hidden=!m[3]}
 $('rRole').addEventListener('change',()=>setMode($('rRole').value));
 document.querySelectorAll('[data-role]').forEach(a=>a.addEventListener('click',()=>{$('rRole').value=a.dataset.role;setMode(a.dataset.role)}));
 function rqMail(){const v=id=>$(id).value.trim()||'-';let body=`Role: ${$('rRole').selectedOptions[0].text}\nName: ${v('rName')}\nEmail: ${v('rEmail')}\nOrganisation: ${v('rOrg')}\n\n${$('rMatLabel').textContent} ${v('rMat')}`;if(!$('rDetails').hidden)body+=`\nAmount: ${v('rAmount')}\n${$('rWhenLabel').textContent}: ${v('rWhen')}\nLocation: ${v('rLoc')}`;location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Scrap Futures: '+v('rMat').slice(0,60))+'&body='+encodeURIComponent(body)}

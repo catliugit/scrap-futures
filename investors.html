@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scrap Futures — For investors</title>
-<meta name="description" content="Why Scrap Futures, why now: market timing, competition, business model and plan.">
+<title>Scrap Futures | For investors</title>
+<meta name="description" content="Scrap Futures for investors: the EU unsold-goods ban, market size, business model, unit economics, projections, competition and plan.">
 <meta name="theme-color" content="#16211F">
-<meta property="og:title" content="Scrap Futures — Forecast textile offcuts before the cut">
-<meta property="og:description" content="Material intelligence for circular supply. Turning factory offcuts into forecastable, contractable recycling feedstock.">
+<meta property="og:title" content="Scrap Futures | For investors">
+<meta property="og:description" content="Route unsold stock, prove it to the EU, and make less of it next season.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -356,6 +356,19 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 
+/* v6: ledger */
+.lg-row{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;font-size:.78rem;padding:9px 11px;border-radius:9px;background:#fff;border:1px solid #E5ECE9}
+.lg-row b{font-weight:650}
+.lg-row .rt{font-size:.66rem;font-weight:700;padding:3px 7px;border-radius:5px;background:#E3F2EE;color:var(--teal-d);white-space:nowrap}
+.lg-row .up{font-variant-numeric:tabular-nums;color:var(--teal-d);font-weight:700}
+.lg-checks{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px;font-size:.74rem;color:#55635F}
+.lg-checks span::before{content:"✓ ";color:var(--teal);font-weight:800}
+.rule{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rule .card h3{margin:10px 0 8px}
+.rule .when{font-family:var(--serif);font-style:italic;font-size:1.9rem;color:var(--teal);line-height:1}
+.rule .card.hl .when{color:var(--lime)}
+@media(max-width:1040px){.rule{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.rule{grid-template-columns:1fr}.lg-checks{grid-template-columns:1fr}}
 /* v5: customer-first */
 .pick{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
 .pick span{display:block;font-size:.78rem;color:var(--on-dark-2);margin-bottom:12px}
@@ -382,130 +395,129 @@ footer{background:#0F1817;color:var(--on-dark-2);padding:40px 0;font-size:.8rem}
 .inv-hero{padding:88px 0 72px}
 .inv-hero h1{font-size:clamp(2.4rem,5vw,4.2rem);margin:22px 0 20px}
 @media(max-width:760px){.aud{grid-template-columns:1fr}.how3 .step::after{display:none}}
+
+.inv-hero{padding:88px 0 72px}
+.inv-hero h1{font-size:clamp(2.4rem,5vw,4.2rem);margin:22px 0 20px}
+.num{text-align:right;white-space:nowrap}
+.mk .n{width:auto;padding:0 12px;font-size:1.1rem}
 </style>
 </head>
 <body>
-
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="index.html" aria-label="Scrap Futures home">
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#197F70" stroke-width="2"/><path d="M9 12H31M9 20H31M9 28H31" stroke="#197F70" stroke-width="3" stroke-linecap="round"/><path d="M15 8V15M15 25V32M25 8V15M25 25V32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M15 15V25M25 15V25" stroke="#D9F17E" stroke-width="3" stroke-linecap="round"/></svg>
-      Scrap Futures
-    </a>
+    <a class="brand" href="index.html" aria-label="Scrap Futures home"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#197F70" stroke-width="2"/><path d="M9 12H31M9 20H31M9 28H31" stroke="#197F70" stroke-width="3" stroke-linecap="round"/><path d="M15 8V15M15 25V32M25 8V15M25 25V32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M15 15V25M25 15V25" stroke="#D9F17E" stroke-width="3" stroke-linecap="round"/></svg>Scrap Futures</a>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
     <nav class="links" id="links" aria-label="Main">
-      <a href="#why-now">Why now</a>
-      <a href="#competition">Competition</a>
-      <a href="#model">Model</a>
-      <a href="#roadmap">Plan</a>
+      <a href="#market">Market</a><a href="#model">Model</a><a href="#projection">Projection</a><a href="#competition">Competition</a><a href="#plan">Plan</a>
       <a class="btn btn-lime btn-sm" href="mailto:cathyqliu1@gmail.com?subject=Scrap%20Futures%20%E2%80%94%20investor%20enquiry">Contact Cathy</a>
     </nav>
   </div>
 </header>
-
 <main id="top">
 <section class="hero dark">
   <div class="wrap inv-hero">
-    <span class="pill"><i></i> For investors and programmes</span>
-    <h1>Why Scrap Futures, <span class="serif">why now.</span></h1>
-    <p class="lede" style="max-width:720px">Cutting-room waste is effectively decided when the cutting plan is made. Yet it’s only weighed after the run, sorted inconsistently, and mostly exported or sold as low-grade bales. Recyclers say they can’t build plants without committed, predictable supply (<a href="https://www.kearney.com/documents/d/asset-library-291362522/from-circular-intent-to-operating-advantage-circular-fashion-index-2026-pdf" target="_blank" rel="noopener" style="text-decoration:underline">Kearney 2026</a>; <a href="http://resource-recycling.com/recycling/2026/10/27/buyers-usable-feedstock-key-to-textile-recycling/" target="_blank" rel="noopener" style="text-decoration:underline">Textile Exchange</a>).</p>
+    <span class="pill"><i></i> For investors and programmes · pre-revenue</span>
+    <h1>The system of record for <span class="serif">unsold fashion stock.</span></h1>
+    <p class="lede" style="max-width:720px">Since 19 July 2026, large companies selling clothes or shoes in the EU, UK brands included, may not destroy unsold stock, and that includes recycling it. Exceptions need evidence and a public disclosure checked to within 10%. Today that evidence lives in emails and liquidator spreadsheets. Scrap Futures routes each unsold batch to its best legal outlet, produces the proof automatically, and turns the data into a buy-less forecast.</p>
     <div class="cta-row"><a class="btn btn-line" href="index.html">← Back to the main site</a></div>
   </div>
 </section>
 
-<div id="why-now">
-<section class="strip" aria-label="Why now">
+<section class="strip" aria-label="Key numbers">
   <div class="wrap strip-in">
-    <div class="stat"><b>Q4 2027</b><span>EU textile ecodesign rules due for adoption: proposed recycled-content requirements plus disclosure of the <em>type of waste</em> the material came from</span><a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en" target="_blank" rel="noopener">European Commission</a></div>
-    <div class="stat"><b>~10%</b><span>of segregated factory waste in a Bangladesh pilot could go to textile-to-textile recycling. Recyclers “lack predictable, traceable waste flows”</span><a href="https://globalfashionagenda.org/news-article/transforming-post-industrial-textile-waste-in-bangladesh/" target="_blank" rel="noopener">Global Fashion Agenda</a></div>
-    <div class="stat"><b>5–7%</b><span>of Bangladesh’s pre-consumer cotton waste is recycled in-country. The rest is exported or downcycled</span><a href="https://lightcastlepartners.com/insights/2026/04/advancing-circularity-bangladesh-rmg-sector-oporajita-phase-2/" target="_blank" rel="noopener">LightCastle, 2026</a></div>
+    <div class="stat"><b>4–9%</b><span>of textiles placed on the EU market were destroyed before use (264,000–594,000 t a year)</span><a href="https://www.eea.europa.eu/en/analysis/publications/the-destruction-of-returned-and-unsold-textiles-in-europes-circular-economy" target="_blank" rel="noopener">European Environment Agency, 2024</a></div>
+    <div class="stat"><b>20–50%</b><span>of net sales lost to markdowns at a typical fashion retailer</span><a href="https://www.bain.com/insights/curing-the-discount-disease-in-soft-goods-retail/" target="_blank" rel="noopener">Bain, 2021</a></div>
+    <div class="stat"><b>&gt;75%</b><span>of 95 UN Fashion Charter signatories didn’t disclose what happens to unsold goods</span><a href="https://iksz.fsv.cuni.cz/en/news/fashion-industry-strategically-stays-silent-unsold-goods-new-study-reveals" target="_blank" rel="noopener">Charles University, 2025</a></div>
   </div>
 </section>
-</div>
 
-<section class="sec why" id="competition">
+<section class="sec" id="market">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><div class="eyebrow">How we compare</div><h2>Everyone else starts after the cut.</h2></div>
-      <p class="lede">Cutting software optimises the plan; traceability platforms record waste after it exists. Nobody turns the plan into a forward supply contract for recyclers.</p>
+    <div class="sec-head reveal"><div><div class="eyebrow">Market</div><h2>£17m today, roughly doubling in 2030, before forecasting.</h2></div><p class="lede">Bottom-up estimates. There is no official count of in-scope companies; ours starts from Eurostat 2023 enterprise counts plus non-EU brands selling into the EU.</p></div>
+    <div class="grid4 mk">
+      <article class="step reveal"><div class="n">£17m</div><h3>Ledger market today</h3><p>~850–1,150 large in-scope apparel and footwear groups × ~£17k a year.</p></article>
+      <article class="step reveal"><div class="n">£35m</div><h3>From 2030</h3><p>Medium-sized companies join: ~3,000–4,000 groups.</p></article>
+      <article class="step reveal"><div class="n">£85m</div><h3>Forecasting upsell</h3><p>The same groups buying buy-less forecasting.</p></article>
+      <article class="step reveal"><div class="n">£2.5–5m</div><h3>Reachable from London</h3><p>150–300 UK and English-speaking EU brands.</p></article>
     </div>
+  </div>
+</section>
+
+<section class="sec why" id="model">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Business model</div><h2>Brands pay. Outlets join free.</h2></div><p class="lede">One brand earns about £35k a year at a 93% gross margin. The brand gets back roughly £9 for every £1 it pays.</p></div>
     <div class="tbl-wrap reveal">
       <table class="tbl">
-        <thead><tr><th>Approach</th><th>Forecast pre-cut</th><th>Common grade standard</th><th>Forward offtake</th><th>Brand-ready evidence</th></tr></thead>
+        <thead><tr><th>Per brand, per year (typical mix)</th><th class="num">£</th><th>How it’s worked out</th></tr></thead>
         <tbody>
-          <tr><td>Waste-mapping & traceability platforms<br><small style="font-weight:400;color:var(--muted)">e.g. Reverse Resources</small></td><td class="no">After generation</td><td class="yes">Partial</td><td class="no">Limited</td><td class="yes">Yes</td></tr>
-          <tr><td>Cutting-room software<br><small style="font-weight:400;color:var(--muted)">e.g. Lectra, Gerber, ThreadSol</small></td><td class="yes">Fabric need &amp; marker waste</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
-          <tr><td>Waste brokers &amp; marketplaces<br><small style="font-weight:400;color:var(--muted)">local jhut traders; Eslando</small></td><td class="no">No</td><td class="no">Ad hoc</td><td class="no">Spot sales</td><td class="no">Limited</td></tr>
-          <tr><td>Recyclers’ own sourcing teams</td><td class="no">No</td><td class="no">Own spec only</td><td class="yes">Bilateral</td><td class="no">Limited</td></tr>
-          <tr class="us"><td>Scrap Futures</td><td class="yes">Weighed offcut, by grade</td><td class="yes">RMDF-aligned</td><td class="yes">Reserved pre-cut</td><td class="yes">Lot-level</td></tr>
+          <tr><td>Ledger subscription</td><td class="num">18,000</td><td>£1,500 a month</td></tr>
+          <tr><td>Success fee</td><td class="num">5,400</td><td>£1.5m stock routed × 18 pts better recovery × 4% × half of brands</td></tr>
+          <tr><td>Forecasting upsell</td><td class="num">12,000</td><td>£40k × 30% of brands</td></tr>
+          <tr><td>Hosting + support</td><td class="num">(2,500)</td><td>Cloud, 5-year archive, support</td></tr>
+          <tr class="us"><td>Gross profit per brand</td><td class="num">32,900</td><td>93% gross margin</td></tr>
+          <tr><td>Cost to win a brand</td><td class="num">~13,000</td><td>Sales & marketing + onboarding; paid back in ~5 months</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="grid3 moat">
-      <article class="card reveal"><span class="k">Moat 01</span><h3>Calibration data</h3><p>Every forecast versus its actual weighed output improves the model. That dataset isn’t publicly available anywhere today.</p></article>
-      <article class="card reveal"><span class="k">Moat 02</span><h3>Forward contracts</h3><p>Recyclers reserve supply against our forecasts. Contract history and delivery performance are hard to copy.</p></article>
-      <article class="card reveal"><span class="k">Moat 03</span><h3>Two-sided network</h3><p>Forward agreements with recyclers make each new brand programme instantly more valuable.</p></article>
+  </div>
+</section>
+
+<section class="sec" id="projection">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Projection</div><h2>Base case: £1.8m revenue and 54 brands by 2031.</h2></div><p class="lede">Estimates from a formula-driven model with every assumption editable: £18k subscription, 60% pilot conversion, 10% annual churn, team growing to the founder plus 9 by 2031.</p></div>
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Scenario</th><th class="num">Brands 2031</th><th class="num">Revenue 2031</th><th class="num">Profit 2031</th><th class="num">First profit</th><th class="num">Cash needed first</th></tr></thead>
+        <tbody>
+          <tr><td>Cautious</td><td class="num">29</td><td class="num">£0.96m</td><td class="num">£0.09m</td><td class="num">2031</td><td class="num">£343k</td></tr>
+          <tr class="us"><td>Base</td><td class="num">54</td><td class="num">£1.79m</td><td class="num">£0.75m</td><td class="num">2029</td><td class="num">£75k</td></tr>
+          <tr><td>Upside</td><td class="num">81</td><td class="num">£2.68m</td><td class="num">£1.46m</td><td class="num">2028</td><td class="num">£5k</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section class="sec" id="model">
+<section class="sec why" id="competition">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><div class="eyebrow">How it grows</div><h2>Start with one match, then build the network.</h2></div>
-      <p class="lede">Free for factories. Brands and recyclers are the sides that need predictable, traceable supply.</p>
-    </div>
-    <div class="grid4">
-      <article class="step reveal"><div class="n">01</div><h3>Brand programmes</h3><p>Licensed programme: forecasts, grading and offtake evidence across a brand’s factory network.</p></article>
-      <article class="step reveal"><div class="n">02</div><h3>Factory network</h3><p>Each factory onboarded for one brand can serve every brand it produces for.</p></article>
-      <article class="step reveal"><div class="n">03</div><h3>Forward offtake</h3><p>Standard forward contracts for graded post-industrial feedstock, as recycler capacity comes online.</p></article>
-      <article class="step reveal"><div class="n">04</div><h3>Feedstock data layer</h3><p>Verified waste-origin data for recycled-content claims under EU ecodesign rules, and for recycler financing.</p></article>
+    <div class="sec-head reveal"><div><div class="eyebrow">Competition</div><h2>Many players own one piece. Nobody owns the record.</h2></div></div>
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Who</th><th>Forecast</th><th>Route</th><th>EU evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Stock allocation AI<br><small style="font-weight:400;color:var(--muted)">e.g. Nextail, Onebeat, Increff</small></td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Resale & off-price<br><small style="font-weight:400;color:var(--muted)">e.g. Trove, Archive, Otrium, smatch (partners)</small></td><td class="no">No</td><td class="yes">One channel</td><td class="no">No</td></tr>
+          <tr><td>Compliance suites<br><small style="font-weight:400;color:var(--muted)">e.g. TrusTrace, osapiens</small></td><td class="no">No</td><td class="no">No</td><td class="yes">Partial</td></tr>
+          <tr><td>Routing + audit trail<br><small style="font-weight:400;color:var(--muted)">e.g. Flexireo, ReBound, Zerow (early)</small></td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Partial</td></tr>
+          <tr class="us"><td>Scrap Futures</td><td class="yes">Yes (upsell)</td><td class="yes">All outlets</td><td class="yes">Full pack</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section class="sec" id="impact">
+<section class="sec" id="plan">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><div class="eyebrow">Impact</div><h2>Impact is built into the revenue.</h2></div>
-      <p class="lede">The recycler fee is earned per tonne verified as delivered, so the business grows only when material is actually recovered.</p>
-    </div>
-    <div class="grid4">
-      <article class="step reveal"><div class="n">01</div><h3>Forecast</h3><p>Offcuts are known before the cut, by fibre and colour.</p></article>
-      <article class="step reveal"><div class="n">02</div><h3>Redirect</h3><p>Graded lots go to fibre-to-fibre recycling instead of downcycling, export or landfill.</p></article>
-      <article class="step reveal"><div class="n">03</div><h3>Displace</h3><p>Recycled fibre replaces virgin cotton and polyester in new garments.</p></article>
-      <article class="step reveal"><div class="n">04</div><h3>Build capacity</h3><p>Forward supply helps recyclers finance plants, including in garment-producing countries.</p></article>
-    </div>
-    <div class="datanote reveal"><span class="ic">📏</span><p><b>We count what moves.</b> No impact figures yet: no material has moved so far. Pilots will report forecast vs weighed kg, and kg delivered by route (reused, recycled). Any CO2e figure will use a cited published factor and be labelled as an estimate.</p></div>
-  </div>
-</section>
-
-<section class="sec why" id="roadmap">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div><div class="eyebrow">Plan</div><h2>Prove one match, then build the marketplace.</h2></div>
-      <p class="lede">Each stage has a pass/fail gate before the next one starts.</p>
-    </div>
+    <div class="sec-head reveal"><div><div class="eyebrow">Plan</div><h2>Prove it with three brands, then sell through the industry.</h2></div><p class="lede">Each stage has a goal before the next one starts.</p></div>
     <div class="road">
-      <div class="ph now reveal"><span class="when">Next 30 days</span><h3>Discovery</h3><ul><li>15 brand sourcing / sustainability leads</li><li>5 mechanical &amp; chemical recyclers: “would a 6-month forward forecast change your purchasing or financing?”</li><li>Forecast one real cutting layout</li></ul><div class="gate"><b>Gate:</b> 6 brand calls, 2 recyclers name grades and volumes</div></div>
-      <div class="ph reveal"><span class="when">Months 2–4</span><h3>First pilot</h3><ul><li>1 brand, 1–2 factories</li><li>Forecast vs. weighed actuals</li><li>First recycler letter of intent</li></ul><div class="gate"><b>Gate:</b> forecast within ±15%, 1 LOI signed</div></div>
-      <div class="ph reveal"><span class="when">Months 5–9</span><h3>First matches</h3><ul><li>RMDF-aligned grade spec</li><li>First verified lots shipped</li><li>Roll ends offered to London reuse buyers</li><li>Brand reporting pack</li></ul><div class="gate"><b>Gate:</b> 3 brand programmes</div></div>
-      <div class="ph reveal"><span class="when">Months 10–24</span><h3>Platform</h3><ul><li>Marker-file ingestion at scale</li><li>Self-serve recycler matching</li><li>EPR-ready data exports</li></ul><div class="gate"><b>Gate:</b> ~10 brands, founder break-even</div></div>
+      <div class="ph now reveal"><span class="when">Next 90 days</span><h3>Discover</h3><ul><li>15 interviews with ops and sustainability leads</li><li>5 outlets ready to take routed stock</li><li>Prototype on one brand’s real data</li></ul><div class="gate"><b>Goal:</b> 3 design partners, 1 paid pilot</div></div>
+      <div class="ph reveal"><span class="when">2027</span><h3>First customers</h3><ul><li>Pilots → subscriptions</li><li>UKFT and BRC events, referrals</li><li>Commercial co-founder</li></ul><div class="gate"><b>Goal:</b> 10 paying brands</div></div>
+      <div class="ph reveal"><span class="when">2028</span><h3>Product</h3><ul><li>ERP connectors</li><li>Forecasting upsell</li><li>EU mid-market brands</li></ul><div class="gate"><b>Goal:</b> 18 brands by 2029</div></div>
+      <div class="ph reveal"><span class="when">2029–31</span><h3>Scale</h3><ul><li>Medium companies join (2030)</li><li>Self-serve onboarding</li><li>Returns and offcut modules</li></ul><div class="gate"><b>Goal:</b> 54 brands, £1.8m revenue</div></div>
     </div>
+    <div class="datanote reveal"><span class="ic">!</span><p><b>Main risks:</b> enforcement is still being set country by country (so we sell recovered money first); brands may make do with spreadsheets and existing liquidators; early competitors; long sales cycles for a solo founder (so mid-market first, paid pilots, and a commercial co-founder).</p></div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="wrap">
     <div class="foot">
       <a class="brand" href="index.html"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#197F70" stroke-width="2"/><path d="M9 12H31M9 20H31M9 28H31" stroke="#197F70" stroke-width="3" stroke-linecap="round"/><path d="M15 8V15M15 25V32M25 8V15M25 25V32" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M15 15V25M25 15V25" stroke="#D9F17E" stroke-width="3" stroke-linecap="round"/></svg>Scrap Futures</a>
-      <nav><a href="index.html">Main site</a><a href="index.html#demo">Demo</a><a href="index.html#join">Become a pilot partner</a></nav>
+      <nav><a href="index.html">Main site</a><a href="index.html#demo">Forecasting lab</a><a href="index.html#join">Become a design partner</a></nav>
     </div>
     <p>© 2026 Scrap Futures · London. Early-stage venture. Product screens and demo figures are illustrative prototypes; model outputs are hypotheses under validation. No customers or recycler commitments are implied.</p>
   </div>
 </footer>
-
 <script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
