@@ -1,3 +1,5 @@
+> **This project is now Thread Futures.** Active code and website: [github.com/catliugit/ThreadFutures](https://github.com/catliugit/ThreadFutures) · [threadfutures.com](https://threadfutures.com). This repository is archived and kept for history.
+
 # Scrap Futures
 
 **No unsold clothes wasted.** Scrap Futures helps fashion brands route unsold stock to its best legal home (off-price, resale, donation or reprocessing), keep the evidence the EU's ban on destroying unsold clothes requires, and buy less next season.
